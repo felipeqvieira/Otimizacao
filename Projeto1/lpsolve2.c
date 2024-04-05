@@ -19,7 +19,7 @@ typedef struct pacotes{
 
 int main(){
 
-  int n, m, k, q, p, rotasprimarias, primeiro = 0;
+  int n, m, k, q, p, primeiro = 0;
 
   scanf("%d %d %d %d %d", &n, &m, &k, &q, &p);
 
@@ -32,6 +32,7 @@ int main(){
     exit(1);
   }
 
+  int rotasprimarias = 0;
   
   for(int i=0; i<m; i++){
     rotas_array[i].recursosr = malloc(k * sizeof(recursos));
@@ -106,25 +107,25 @@ int main(){
     exit(1);
   }
 
-  fprintf(arq, "max: %d*(", p);
+  fprintf(arq, "max: ");
 
   for(int i = 0; i < m; i++){
     if(rotas_array[i].x == 1){
-      fprintf(arq, "x%d%d", rotas_array[i].x, rotas_array[i].y);
+      fprintf(arq, "%d*x%d%d", p, rotas_array[i].x, rotas_array[i].y);
       if(i < rotasprimarias - 1)
         fprintf(arq, " + ");
     }
   }
 
-  fprintf(arq, ") - (");
+  fprintf(arq, " - ");
 
   for(int i = 0; i < q; i++){
     fprintf(arq, "%d*y%d", pacotes_array[i].custo, i+1);
     if(i < q - 1)
-      fprintf(arq, " + ");
+      fprintf(arq, " - ");
   }
 
-  fprintf(arq, ");\n");
+  fprintf(arq, ";\n");
 
   fprintf(arq, "\n");
 
@@ -148,19 +149,26 @@ int main(){
 
   for(int i = 0; i < k; i++){
     for(int j = 0; j < m; j++){
-      fprintf(arq, "%d*x%d%d", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
 
-      if(j < m - 1)
-        fprintf(arq, " + ");
+      if(rotas_array[j].recursosr[i].recurso != 0){
+        fprintf(arq, "%d*x%d%d", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
+
+        if(j < m - 1)
+          fprintf(arq, " + ");
+      }
     }
 
     fprintf(arq, " <= ");
 
     for(int j = 0; j < q; j++){
-      fprintf(arq, "%d*y%d", pacotes_array[j].recursosp[i].recurso, j+1);
 
-      if(j < q - 1)
-        fprintf(arq, " + ");
+      if(pacotes_array[j].recursosp[i].recurso != 0){
+        fprintf(arq, "%d*y%d", pacotes_array[j].recursosp[i].recurso, j+1);
+
+        if(j < q - 1)
+          fprintf(arq, " + ");
+      }
+
     }
     fprintf(arq, ";");
     fprintf(arq, "\n");
