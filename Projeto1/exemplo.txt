@@ -1,0 +1,7 @@
+4 = cidades 5 = rotas 3 = recursos 2 = pacotes 100 = ganho
+1 = x 2 = y 5 = capacidade 1 = recurso1 1 = recurso2 5 = recurso3
+.
+.
+.
+.
+10 = custo 4 = recurso1 2 = recurso2 0 = recurso3

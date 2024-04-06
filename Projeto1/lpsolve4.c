@@ -3,7 +3,7 @@
 
 typedef struct recursos{
   float recurso;
-} recursos;
+}recursos;
 
 typedef struct rotas{
   float x, y, capacidade, usado;
@@ -15,11 +15,12 @@ typedef struct pacotes{
   recursos *recursosp;
 }pacotes;
 
-
-
 int main(){
 
-  float n, m, k, q, p, primeiro = 0;
+  // Leitura inicial
+
+  float n, m, k, q, p = 0;
+  int rotasprimarias, primeiro = 0;
 
   scanf("%f %f %f %f %f", &n, &m, &k, &q, &p);
 
@@ -32,12 +33,11 @@ int main(){
     exit(1);
   }
 
-  int rotasprimarias = 0;
-  
-  for(int i=0; i<m; i++){
+  // Leitura das rotas
+  for(int i = 0; i < m; i++){
     rotas_array[i].recursosr = malloc(k * sizeof(recursos));
 
-    rotas_array[i].usado = 0; 
+    rotas_array[i].usado = 0;
 
     if(! rotas_array[i].recursosr){
       printf("Erro ao alocar memória\n");
@@ -50,20 +50,27 @@ int main(){
     scanf("%f", &rotas_array[i].capacidade);
 
     if(rotas_array[i].x == 1){
-      printf("rotas[%d].x = %f;\n", i, rotas_array[i].x);
-      printf("rotas[%d].y = %f;\n", i, rotas_array[i].y);
+      printf("rotas[%d].x = %.2f;\n", i, rotas_array[i].x);
+      printf("rotas[%d].y = %.2f;\n", i, rotas_array[i].y);
       rotasprimarias++;
     }
-    
+
+    printf("\nrotas[%d].x = %.2f;\n", i, rotas_array[i].x);
+    printf("rotas[%d].y = %.2f;\n", i, rotas_array[i].y);
+    printf("rotas[%d].capacidade = %.2f;\n", i, rotas_array[i].capacidade);
+
     for(int j = 0; j < k; j++){
       scanf("%f", &rotas_array[i].recursosr[j].recurso);
+      printf("\nrotas[%d].recursosr[%d].recurso = %.2f;\n", i, j, rotas_array[i].recursosr[j].recurso);
     }
 
   }
 
-  printf("rotasprimarias = %d\n", rotasprimarias);
+  printf("\nrotasprimarias = %d\n", rotasprimarias);
 
-  pacotes *pacotes_array = malloc(q * sizeof(pacotes_array));
+  //Leitura pacotes
+
+  pacotes *pacotes_array = malloc(q * sizeof(pacotes));
 
   if(! pacotes_array){
     printf("Erro ao alocar memória\n");
@@ -79,23 +86,24 @@ int main(){
     }
 
     scanf("%f", &pacotes_array[i].custo);
-    printf("pacotes[%d].custo = %f;\n", i, pacotes_array[i].custo);
 
     for(int j = 0; j < k; j++){
       scanf("%f", &pacotes_array[i].recursosp[j].recurso);
-      printf("pacotes[%d].recursosp[%d].recurso = %f;\n", i, j, pacotes_array[i].recursosp[j].recurso);
+      printf("\npacotes[%d].recursosp[%d].recurso = %.2f;\n", i, j, pacotes_array[i].recursosp[j].recurso);
     }
 
   }
 
+  //Início escrita
+
   FILE *arq = fopen("entrada.txt", "w");
 
-  if(arq == NULL){
+  if(! arq){
     printf("Erro ao abrir arquivo\n");
     exit(1);
   }
 
-// Escrita da função objetivo
+  // Escrita da função objetivo
 
   fprintf(arq, "max: ");
 
@@ -140,12 +148,12 @@ int main(){
   for(int i = 0; i < k; i++){
     for(int j = 0; j < m; j++){
 
-      if(rotas_array[j].recursosr[i].recurso != 0){
-        fprintf(arq, "%.2f*f%.0f%.0f", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
+      fprintf(arq, "%.2f*f%.0f%.0f", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
 
-        if(j < m - 1)
-          fprintf(arq, " + ");
+      if(j < m - 1){
+        fprintf(arq, " + ");
       }
+      
     }
 
     fprintf(arq, " <= 0");
@@ -159,7 +167,7 @@ int main(){
 
     }
     fprintf(arq, ";");
-    fprintf(arq, "\n");
+    fprintf(arq, "\n\n");
   }
 
   fprintf(arq, "\n");
