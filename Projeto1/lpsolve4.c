@@ -6,7 +6,8 @@ typedef struct recursos{
 }recursos;
 
 typedef struct rotas{
-  float x, y, capacidade, usado;
+  int x, y;
+  float capacidade, usado;
   recursos *recursosr;
 }rotas;
 
@@ -44,20 +45,20 @@ int main(){
       exit(1);
     }
 
-    scanf("%f", &rotas_array[i].x);
+    scanf("%d", &rotas_array[i].x);
 
-    scanf("%f", &rotas_array[i].y);
+    scanf("%d", &rotas_array[i].y);
     scanf("%f", &rotas_array[i].capacidade);
 
     if(rotas_array[i].x == 1){
-      printf("rotas[%d].x = %.2f;\n", i, rotas_array[i].x);
-      printf("rotas[%d].y = %.2f;\n", i, rotas_array[i].y);
+      printf("rotas[%d].x = %d;\n", i, rotas_array[i].x);
+      printf("rotas[%d].y = %d;\n", i, rotas_array[i].y);
       rotasprimarias++;
     }
 
-    printf("\nrotas[%d].x = %.2f;\n", i, rotas_array[i].x);
-    printf("rotas[%d].y = %.2f;\n", i, rotas_array[i].y);
-    printf("rotas[%d].capacidade = %.2f;\n", i, rotas_array[i].capacidade);
+    printf("\nrotas[%d].x = %d;\n", i, rotas_array[i].x);
+    printf("rotas[%d].y = %d;\n", i, rotas_array[i].y);
+    printf("rotas[%d].capacidade = %0.2f;\n", i, rotas_array[i].capacidade);
 
     for(int j = 0; j < k; j++){
       scanf("%f", &rotas_array[i].recursosr[j].recurso);
@@ -109,7 +110,7 @@ int main(){
 
   for(int i = 0; i < m; i++){
     if(rotas_array[i].x == 1){
-      fprintf(arq, "%.2f*x%.0f%.0f", p, rotas_array[i].x, rotas_array[i].y);
+      fprintf(arq, "%.2f*x%d%d", p, rotas_array[i].x, rotas_array[i].y);
       if(i < rotasprimarias - 1)
         fprintf(arq, " + ");
     }
@@ -130,15 +131,15 @@ int main(){
   //restrições
 
   for(int i = 0; i < m; i++){
-    fprintf(arq, "-%.2f <= x%.0f%.0f <= %.2f;\n", rotas_array[i].capacidade, rotas_array[i].x, rotas_array[i].y, rotas_array[i].capacidade);
+    fprintf(arq, "-%.2f <= x%d%d <= %.2f;\n", rotas_array[i].capacidade, rotas_array[i].x, rotas_array[i].y, rotas_array[i].capacidade);
   }
 
   fprintf(arq, "\n");
 
   for(int i = 0; i < m; i++){
-    fprintf(arq, "f%.0f%.0f >= -x%.0f%.0f;\n", rotas_array[i].x, rotas_array[i].y, rotas_array[i].x, rotas_array[i].y);
-    fprintf(arq, "f%.0f%.0f >= x%.0f%.0f;\n", rotas_array[i].x, rotas_array[i].y, rotas_array[i].x, rotas_array[i].y);
-    fprintf(arq, "f%.0f%.0f >= 0;\n", rotas_array[i].x, rotas_array[i].y);  
+    fprintf(arq, "f%d%d >= -x%d%d;\n", rotas_array[i].x, rotas_array[i].y, rotas_array[i].x, rotas_array[i].y);
+    fprintf(arq, "f%d%d >= x%d%d;\n", rotas_array[i].x, rotas_array[i].y, rotas_array[i].x, rotas_array[i].y);
+    fprintf(arq, "f%d%d >= 0;\n", rotas_array[i].x, rotas_array[i].y);  
   }
 
   fprintf(arq, "\n");
@@ -148,7 +149,7 @@ int main(){
   for(int i = 0; i < k; i++){
     for(int j = 0; j < m; j++){
 
-      fprintf(arq, "%.2f*f%.0f%.0f", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
+      fprintf(arq, "%.2f*f%d%d", rotas_array[j].recursosr[i].recurso, rotas_array[j].x, rotas_array[j].y);
 
       if(j < m - 1){
         fprintf(arq, " + ");
@@ -172,46 +173,41 @@ int main(){
 
   fprintf(arq, "\n");
   
-  int x, y, expressoes = 0;
+  int x, y;
 
   //Equações das rotas
-  
-  for(int i = 0; i < m; i++){
 
-    if(rotas_array[i].usado == 0 && expressoes < n-2){
-      fprintf(arq, "x%.0f%.0f", rotas_array[i].x, rotas_array[i].y);
+  for(int i = 0; i < m; i++){
+    
+    if (rotas_array[i].usado == 0 && rotas_array[i].y != n){
+      fprintf(arq, "x%d%d", rotas_array[i].x, rotas_array[i].y);
       x = rotas_array[i].x;
       y = rotas_array[i].y;
     
       for(int j = i; j < m; j++){
-        
-        if(rotas_array[j].y == y && rotas_array[j].x != x){
-          fprintf(arq, " + x%.0f%.0f", rotas_array[j].x, rotas_array[j].y);
-        }
 
+        if(rotas_array[j].y == y && rotas_array[j].x != x){
+          fprintf(arq, " + x%d%d", rotas_array[j].x, rotas_array[j].y);
+          rotas_array[j].usado = 1;
+        }
       }
 
       for(int k = i; k < m; k++){
         if(rotas_array[k].x == y && rotas_array[k].y != x && rotas_array[k].usado == 0){
           
-          if (primeiro == 0){
+          if(primeiro == 0){
             fprintf(arq, " = 0");
             primeiro = 1;
           }
 
-          fprintf(arq, " + x%.0f%.0f", rotas_array[k].x, rotas_array[k].y);
-          rotas_array[k].usado = 1;
+          fprintf(arq, " + x%d%d", rotas_array[k].x, rotas_array[k].y);
         }
       }
       fprintf(arq, ";\n");
-      expressoes++;
     }
-
     primeiro = 0;
-
     rotas_array[i].usado = 1;
-
   }
-  
+
   return 0;
 }
