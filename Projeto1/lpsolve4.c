@@ -21,11 +21,9 @@ int main(){
   // Leitura inicial
 
   float n, m, k, q, p = 0;
-  int rotasprimarias, primeiro = 0;
+  int primeiro = 0;
 
   scanf("%f %f %f %f %f", &n, &m, &k, &q, &p);
-
-  printf("\ncidades = %f\nrotas = %f\nrecursos = %f\npacotes = %f\nganho = %f\n", n, m, k, q, p);
 
   rotas *rotas_array = malloc(m * sizeof(rotas));
 
@@ -50,24 +48,11 @@ int main(){
     scanf("%d", &rotas_array[i].y);
     scanf("%f", &rotas_array[i].capacidade);
 
-    if(rotas_array[i].x == 1){
-      printf("rotas[%d].x = %d;\n", i, rotas_array[i].x);
-      printf("rotas[%d].y = %d;\n", i, rotas_array[i].y);
-      rotasprimarias++;
-    }
-
-    printf("\nrotas[%d].x = %d;\n", i, rotas_array[i].x);
-    printf("rotas[%d].y = %d;\n", i, rotas_array[i].y);
-    printf("rotas[%d].capacidade = %0.2f;\n", i, rotas_array[i].capacidade);
-
     for(int j = 0; j < k; j++){
       scanf("%f", &rotas_array[i].recursosr[j].recurso);
-      printf("\nrotas[%d].recursosr[%d].recurso = %.2f;\n", i, j, rotas_array[i].recursosr[j].recurso);
     }
 
   }
-
-  printf("\nrotasprimarias = %d\n", rotasprimarias);
 
   //Leitura pacotes
 
@@ -90,7 +75,6 @@ int main(){
 
     for(int j = 0; j < k; j++){
       scanf("%f", &pacotes_array[i].recursosp[j].recurso);
-      printf("\npacotes[%d].recursosp[%d].recurso = %.2f;\n", i, j, pacotes_array[i].recursosp[j].recurso);
     }
 
   }
@@ -108,11 +92,11 @@ int main(){
 
   fprintf(arq, "max: ");
 
+  fprintf(arq, " 0");
+
   for(int i = 0; i < m; i++){
     if(rotas_array[i].x == 1){
-      fprintf(arq, "%.2f*x%d%d", p, rotas_array[i].x, rotas_array[i].y);
-      if(i < rotasprimarias - 1)
-        fprintf(arq, " + ");
+      fprintf(arq, " + %.2f*x%d%d", p, rotas_array[i].x, rotas_array[i].y);
     }
   }
 
@@ -162,7 +146,6 @@ int main(){
     for(int j = 0; j < q; j++){
 
       if(pacotes_array[j].recursosp[i].recurso != 0){
-        printf("pacotes_array[%d].recursosp[%d].recurso = %.2f\n", j, i, pacotes_array[j].recursosp[i].recurso);
         fprintf(arq, " + %.2f*y%d", pacotes_array[j].recursosp[i].recurso, j+1);
       }
 
@@ -179,13 +162,14 @@ int main(){
 
   for(int i = 0; i < m; i++){
     
+    //condição 1 e 4
     if (rotas_array[i].usado == 0 && rotas_array[i].y != n){
       fprintf(arq, "x%d%d", rotas_array[i].x, rotas_array[i].y);
       x = rotas_array[i].x;
       y = rotas_array[i].y;
     
       for(int j = i; j < m; j++){
-
+        //condição 2
         if(rotas_array[j].y == y && rotas_array[j].x != x){
           fprintf(arq, " + x%d%d", rotas_array[j].x, rotas_array[j].y);
           rotas_array[j].usado = 1;
@@ -193,6 +177,7 @@ int main(){
       }
 
       for(int k = i; k < m; k++){
+        //condicao 3 e 1
         if(rotas_array[k].x == y && rotas_array[k].y != x && rotas_array[k].usado == 0){
           
           if(primeiro == 0){
@@ -206,6 +191,7 @@ int main(){
       fprintf(arq, ";\n");
     }
     primeiro = 0;
+    //condição 1
     rotas_array[i].usado = 1;
   }
 
