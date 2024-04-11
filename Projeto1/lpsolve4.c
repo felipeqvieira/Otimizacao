@@ -21,7 +21,6 @@ int main(){
   // Leitura inicial
 
   float n, m, k, q, p = 0;
-  int primeiro = 0;
 
   scanf("%f %f %f %f %f", &n, &m, &k, &q, &p);
 
@@ -176,21 +175,20 @@ int main(){
         }
       }
 
+      fprintf(arq, " = 0");
+
       for(int k = i; k < m; k++){
         //condicao 3 e 1
         if(rotas_array[k].x == y && rotas_array[k].y != x && rotas_array[k].usado == 0){
           
-          if(primeiro == 0){
-            fprintf(arq, " = 0");
-            primeiro = 1;
-          }
-
+         
           fprintf(arq, " + x%d%d", rotas_array[k].x, rotas_array[k].y);
         }
       }
+
       fprintf(arq, ";\n");
+
     }
-    primeiro = 0;
     //condição 1
     rotas_array[i].usado = 1;
   }

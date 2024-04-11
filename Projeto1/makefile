@@ -8,7 +8,7 @@ SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 # Nome do executável
-EXEC = lpsolve
+EXEC = transporte
 
 all: $(EXEC)
 
