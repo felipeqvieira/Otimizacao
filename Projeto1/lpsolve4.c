@@ -179,11 +179,9 @@ int main(){
 
       for(int k = i; k < m; k++){
         //condicao 3 e 1
-        if(rotas_array[k].x == y && rotas_array[k].y != x && rotas_array[k].usado == 0){
-          
-         
+        if(rotas_array[k].x == y && rotas_array[k].y != x && rotas_array[k].usado == 0)
           fprintf(arq, " + x%d%d", rotas_array[k].x, rotas_array[k].y);
-        }
+        
       }
 
       fprintf(arq, ";\n");
