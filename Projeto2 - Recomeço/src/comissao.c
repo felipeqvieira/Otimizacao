@@ -2,6 +2,8 @@
 
 Candidate *candidates;
 conjunto_t *groupCovered; // Indica se um grupo já foi coberto
+conjunto_t *chosenCandidates; // Indica os candidatos escolhidos
+conjunto_t *definitiveSolution; // Indica a solução definitiva
 int qtdGroups, qtdCandidates;
 
 int main(){
@@ -41,6 +43,7 @@ int main(){
 
   }
 
+  
   printf("\nGrupos: %d\n", qtdGroups);
   printf("Candidatos: %d\n", qtdCandidates);
 
@@ -48,10 +51,16 @@ int main(){
     printf("\nCandidato %d: ", i);
     imprime(candidates[i].conjunto);
   }
+  
 
-  conjunto_t *solution = cria_conjunto(qtdCandidates);
+  conjunto_t *solution = cria_conjunto(qtdGroups);
+  chosenCandidates = cria_conjunto(qtdCandidates);
 
-  backTracking(0, solution);
+  int solucaoTam = qtdGroups;
+
+  backTracking(0, solution, solucaoTam);
+
+  imprime(definitiveSolution);
 
   return 0;
   

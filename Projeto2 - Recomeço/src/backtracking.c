@@ -33,10 +33,20 @@ int todosGruposCobertos(conjunto_t *solution){
   }
 }
 
-void backTracking(int currentLevel, conjunto_t *solution){
+void backTracking(int currentLevel, conjunto_t *solution, int solucaoTam){
 
   if(todosGruposCobertos(solution)){
-    imprime(solution);
+
+    if(solucaoTam > solution->card){
+      solucaoTam = solution->card;
+      definitiveSolution = cria_copia(solution);
+    }
+
+    return;
+  }
+
+  if(! limitantFunction(solution, chosenCandidates)){
+    printf("Fui cortado!\n");
     return;
   }
 
@@ -56,10 +66,12 @@ void backTracking(int currentLevel, conjunto_t *solution){
     }
 
     if(canBeAdded){
+      insere_conjunto(chosenCandidates, i);
       insere_conjunto(solution, i);
-      backTracking(currentLevel + 1, solution);
+      backTracking(currentLevel + 1, solution, solucaoTam);
       printf("Voltei, i: %d\n", i);
       retira_conjunto(solution, i);
+      retira_conjunto(chosenCandidates, i);
 
       for(int j = 0; j < candidates[i].numGroups; j++){
         insere_conjunto(groupCovered, candidates[i].groups[j]);
