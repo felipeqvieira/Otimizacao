@@ -43,12 +43,18 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
   }
   */
 
+  /*
+  Calculo Cl = Quais candidatos podem ser selecionados?
+  */
+
+ clCalcule(remaining, improvements->cl);
 
  /*
   Calculo Bound
   1. Desses candidatos, ordernar por quem cobre mais grupo
   2. Com o candidato que cobre mais grupos, a solução fica melhor que a já calculada?
  */
+  boundCalcule(improvements->cl, result->solution, remaining);
   
 
   for(int i = currentLevel; i < qtdCandidates; i++){

@@ -73,7 +73,7 @@ int main(){
     
   }
 
-  //rintf("\nGrupos: %d\n", qtdGroups);
+  //printf("\nGrupos: %d\n", qtdGroups);
   //printf("Candidatos: %d\n", qtdCandidates);
 
   //for(int i = 0; i < qtdCandidates; i++){
@@ -92,7 +92,6 @@ int main(){
   Improvements *improvements = (Improvements *) malloc(sizeof(Improvements));
 
   improvements->cl = cria_conjunto(qtdCandidates);
-  improvements->bound = cria_conjunto(qtdCandidates);
 
   backTracking(0, result, remaining, improvements, options);
 

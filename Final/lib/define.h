@@ -21,7 +21,6 @@ typedef struct{
 
 typedef struct{
   conjunto_t *cl;
-  conjunto_t *bound;
 }Improvements;
 
 typedef struct{
@@ -38,3 +37,7 @@ int todosGruposCobertos(conjunto_t *solution);
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
 
 bool limitantFunction(conjunto_t *solution, Remaining *remaining);
+
+clCalcule(Remaining *remaining, conjunto_t *cl);
+
+boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining);
