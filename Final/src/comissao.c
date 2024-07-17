@@ -73,17 +73,28 @@ int main(){
     
   }
 
-  printf("\nGrupos: %d\n", qtdGroups);
-  printf("Candidatos: %d\n", qtdCandidates);
+  //rintf("\nGrupos: %d\n", qtdGroups);
+  //printf("Candidatos: %d\n", qtdCandidates);
 
-  for(int i = 0; i < qtdCandidates; i++){
-    printf("\nCandidato %d: ", i);
-    for(int j = 0; j < candidates[i].numGroups; j++){
-      printf("%d ", candidates[i].groups[j]);
-    }
-  }
+  //for(int i = 0; i < qtdCandidates; i++){
+    //printf("\nCandidato %d: ", i);
+    //for(int j = 0; j < candidates[i].numGroups; j++){
+      //printf("%d ", candidates[i].groups[j]);
+   // }
+  //}
 
-  backTracking(0, result, remaining);
+  Options *options = (Options *) malloc(sizeof(Options));
+
+  options->otimalidade = 0;
+  options->viabilidade = 0;
+  options->fprofessor = 0;
+
+  Improvements *improvements = (Improvements *) malloc(sizeof(Improvements));
+
+  improvements->cl = cria_conjunto(qtdCandidates);
+  improvements->bound = cria_conjunto(qtdCandidates);
+
+  backTracking(0, result, remaining, improvements, options);
 
   imprime(result->definitiveSolution);
 

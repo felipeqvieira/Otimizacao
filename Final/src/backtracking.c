@@ -26,9 +26,9 @@ int todosGruposCobertos(conjunto_t *solution){
 
 }
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining){
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options){
 
-  if(result->solution > result->definitiveSolution)
+  if(result->solution->card > result->definitiveSolution->card)
     return ;
 
   if(todosGruposCobertos(result->solution)){
@@ -43,9 +43,6 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining){
   }
   */
 
-  /*
-  Calculo Cl = Quais candidatos podem ser selecionados?
-  */
 
  /*
   Calculo Bound
@@ -56,7 +53,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining){
 
   for(int i = currentLevel; i < qtdCandidates; i++){
 
-    printf("Candidato %d\n", i);
+    printf("Candidato  %d\n", i);
     bool canBeAdded = false;
 
     for(int j = 0; j < candidates[i].numGroups; j++){
@@ -72,7 +69,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining){
     if(canBeAdded){
       insere_conjunto(result->solution, i);
       retira_conjunto(remaining->remainingCandidates, i);
-      backTracking(currentLevel+1, result, remaining);
+      backTracking(currentLevel+1, result, remaining, improvements, options);
       insere_conjunto(remaining->remainingCandidates, i);
       retira_conjunto(result->solution, i);
 
