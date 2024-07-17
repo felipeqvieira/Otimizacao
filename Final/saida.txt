@@ -1,0 +1,52 @@
+
+Grupos: 2
+Candidatos: 3
+
+Candidato 0: 1 
+Candidato 1: 2 
+Candidato 2: 1 2 Função TDC: Solução vazia
+Candidato 0
+Grupo 1 do candidato 0 não coberto
+Função todosGruposCobertos: Candidato 0 cobre grupo 1
+Função todosGruposCobertos: Grupos apenas cobertos: 1 
+Candidato 1
+Grupo 2 do candidato 1 não coberto
+Função todosGruposCobertos: Candidato 0 cobre grupo 1
+Função todosGruposCobertos: Candidato 1 cobre grupo 2
+Função todosGruposCobertos: Todos os grupos cobertos
+Grupo 2 do candidato 1 reestabelecido
+Candidato 2
+Grupo 1 do candidato 2 já coberto
+Grupo 2 do candidato 2 não coberto
+Função todosGruposCobertos: Candidato 0 cobre grupo 1
+Função todosGruposCobertos: Candidato 2 cobre grupo 1
+Função todosGruposCobertos: Candidato 2 cobre grupo 2
+Função todosGruposCobertos: Todos os grupos cobertos
+Grupo 1 do candidato 2 reestabelecido
+Grupo 2 do candidato 2 reestabelecido
+Grupo 1 do candidato 0 reestabelecido
+Candidato 1
+Grupo 2 do candidato 1 não coberto
+Função todosGruposCobertos: Candidato 1 cobre grupo 2
+Função todosGruposCobertos: Grupos apenas cobertos: 2 
+Candidato 1
+Grupo 2 do candidato 1 já coberto
+Candidato 2
+Grupo 1 do candidato 2 não coberto
+Grupo 2 do candidato 2 já coberto
+Função todosGruposCobertos: Candidato 1 cobre grupo 2
+Função todosGruposCobertos: Candidato 2 cobre grupo 1
+Função todosGruposCobertos: Candidato 2 cobre grupo 2
+Função todosGruposCobertos: Todos os grupos cobertos
+Grupo 1 do candidato 2 reestabelecido
+Grupo 2 do candidato 2 reestabelecido
+Grupo 2 do candidato 1 reestabelecido
+Candidato 2
+Grupo 1 do candidato 2 não coberto
+Grupo 2 do candidato 2 não coberto
+Função todosGruposCobertos: Candidato 2 cobre grupo 1
+Função todosGruposCobertos: Candidato 2 cobre grupo 2
+Função todosGruposCobertos: Todos os grupos cobertos
+Grupo 1 do candidato 2 reestabelecido
+Grupo 2 do candidato 2 reestabelecido
+2 
