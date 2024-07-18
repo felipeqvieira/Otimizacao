@@ -1,5 +1,6 @@
 #include "../lib/define.h"
 #include <stdlib.h>
+#include <stdbool.h>
 
 int todosGruposCobertos(conjunto_t *solution){
 
@@ -99,7 +100,7 @@ void sort_candidates_by_groups(Candidate *candidates, int num_candidates) {
 }
 
 /*
-  Imprime os candidatos e os grupos que cada um cobre.
+  Imprime os candidatos e os grupos que cada um cobre. Função de debug.
 */
 void print_candidates(Candidate *candidates, int num_candidates) {
   printf("\nprint_candidates():\n");
@@ -111,5 +112,30 @@ void print_candidates(Candidate *candidates, int num_candidates) {
     }
     printf(" }\n");
   }
-  // printf("\n");
+}
+
+/*
+  Verifica a inviabilidade do problema antes de tentar resolver. 
+  Se o problema for inviável, retorna FALSE.
+  Caso contrário, retorna TRUE.
+*/
+bool is_unfeasible(int qtdGroups, int qtdCandidates, Candidate *candidates, conjunto_t *groups_covered) {
+
+  conjunto_t *allGroups = cria_conjunto(qtdGroups);
+
+  /* Insere os grupos cobertos pelos candidatos em um conjunto */
+  for(int i = 0; i < qtdCandidates; i++)
+    for(int j = 0; j < candidates[i].numGroups; j++)
+      insere_conjunto(allGroups, candidates[i].groups[j]);
+
+  /* Verifica se o conjunto de grupos cobertos pelos candidatos é igual ao conjunto de grupos da entrada. */
+  if(!sao_iguais(allGroups, groups_covered)){
+    destroi_conjunto(allGroups);
+    return true; 
+    /* O conjunto de grupos cobertos pelos candidatos não é igual ao conjunto de grupos da entrada. */
+  }
+
+  /* O conjunto de grupos cobertos pelos candidatos é igual ao conjunto de grupos da entrada.*/
+  destroi_conjunto(allGroups);
+  return false;
 }

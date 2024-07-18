@@ -9,6 +9,12 @@ int main(){
   printf("Grupos e Candidatos:\n");
   scanf("%d %d", &qtdGroups, &qtdCandidates);
 
+  // To do: tem que usar stderr para erros
+  if(qtdGroups < 1 || qtdCandidates < 1){
+    printf("Erro: quantidade de grupos ou candidatos inválida\n");
+    return 1;
+  }
+
   // cria conjunto de grupos cobertos e adiciona todos os grupos nele
   groupCovered = cria_conjunto(qtdGroups);
 
@@ -16,14 +22,16 @@ int main(){
     insere_conjunto(groupCovered, i);
   }
 
+  imprime(groupCovered);
+
   candidates = (Candidate *) malloc(qtdCandidates * sizeof(Candidate));
-  if(candidates == NULL){
+  if(candidates == NULL) {
     printf("Erro ao alocar memória para os candidatos\n");
     return 1;
   }
 
   /* Lê a quantidade de grupos de cada candidato e os grupos quais ele participa */
-  for(int i = 0; i < qtdCandidates; i++){
+  for(int i = 0; i < qtdCandidates; i++) {
 
     scanf("%d", &candidates[i].numGroups);
     
@@ -37,6 +45,12 @@ int main(){
     for(int j = 0; j < candidates[i].numGroups; j++)
       scanf("%d", &candidates[i].groups[j]);
   }
+
+  /* Verifica a inviabilidade do problema antes de tentar resolver */
+  if(is_unfeasible(qtdGroups, qtdCandidates, candidates, groupCovered)) { 
+    printf("Inviavel\n");
+    return 0;
+  };
 
   print_candidates(candidates, qtdCandidates);
   sort_candidates_by_groups(candidates, qtdCandidates);
@@ -86,6 +100,10 @@ int main(){
 
   backTracking(0, result, remaining, improvements, options);
 
+  /*
+    To do: No enunciado fala para imprimir sem espaço no começo/fim da linha,
+    tomar cuidado com isso!! Provável que tenhamos que alterar a função de imprimir. 
+  */
   imprime(result->definitiveSolution);
 
   return 0;

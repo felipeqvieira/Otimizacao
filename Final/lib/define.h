@@ -39,6 +39,13 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
 bool limitantFunction(conjunto_t *solution, Remaining *remaining);
 
+bool is_unfeasible(int qtdGroups, int qtdCandidates, Candidate *candidates, conjunto_t *groups_covered);
+/*
+  Verifica a inviabilidade do problema antes de tentar resolver. 
+  Se o problema for inviável, retorna FALSE.
+  Caso contrário, retorna TRUE.
+*/
+
 void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
 /*
   Ordena os candidatos de forma decrescente em relação
@@ -49,3 +56,4 @@ void print_candidates(Candidate *candidates, int num_candidates);
 /*
   Imprime os candidatos e os grupos que cada um cobre.
 */
+
