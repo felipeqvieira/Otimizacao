@@ -73,15 +73,18 @@ int main(){
     
   }
 
-  //printf("\nGrupos: %d\n", qtdGroups);
-  //printf("Candidatos: %d\n", qtdCandidates);
+  /*printf("\nGrupos: %d\n", qtdGroups);
+  printf("Candidatos: %d\n", qtdCandidates);
 
-  //for(int i = 0; i < qtdCandidates; i++){
-    //printf("\nCandidato %d: ", i);
-    //for(int j = 0; j < candidates[i].numGroups; j++){
-      //printf("%d ", candidates[i].groups[j]);
-   // }
-  //}
+  for(int i = 0; i < qtdCandidates; i++){
+    printf("\nCandidato %d: ", i);
+    for(int j = 0; j < candidates[i].numGroups; j++){
+      printf("%d ", candidates[i].groups[j]);
+    }
+  }
+  */
+
+ //printf("\n");
 
   Options *options = (Options *) malloc(sizeof(Options));
 

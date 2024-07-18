@@ -3,7 +3,7 @@
 int todosGruposCobertos(conjunto_t *solution){
 
   if(solution->card == 0){
-    printf("Função TDC: Solução vazia\n");
+    //printf("Função TDC: Solução vazia\n");
     return 0;
   }
 
@@ -12,15 +12,15 @@ int todosGruposCobertos(conjunto_t *solution){
   for(int i = 0; i < solution->card; i++)
     for(int j = 0; j < candidates[solution->v[i]].numGroups; j++){
       insere_conjunto(cobertos, candidates[solution->v[i]].groups[j]);
-      printf("Função todosGruposCobertos: Candidato %d cobre grupo %d\n", solution->v[i], candidates[solution->v[i]].groups[j]);
+      //printf("Função todosGruposCobertos: Candidato %d cobre grupo %d\n", solution->v[i], candidates[solution->v[i]].groups[j]);
     }
 
   if(cobertos->card == qtdGroups){
-    printf("Função todosGruposCobertos: Todos os grupos cobertos\n");
+    //printf("Função todosGruposCobertos: Todos os grupos cobertos\n");
     return 1;
   } else{
-    printf("Função todosGruposCobertos: Grupos apenas cobertos: ");
-    imprime(cobertos);
+   // printf("Função todosGruposCobertos: Grupos apenas cobertos: ");
+    //imprime(cobertos);
     return 0;
   }
 
@@ -36,12 +36,6 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     result->definitiveSolution = cria_copia(result->solution);
     return ;
   }
-
-  /*if(limitantFunction(result->solution, remaining)){
-    printf("Fui cortado!\n");
-    return ;
-  }
-  */
 
   /*
   Calculo Cl = Quais candidatos podem ser selecionados?
@@ -59,15 +53,15 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
   for(int i = currentLevel; i < qtdCandidates; i++){
 
-    printf("Candidato  %d\n", i);
+    //printf("Candidato  %d\n", i);
     bool canBeAdded = false;
 
     for(int j = 0; j < candidates[i].numGroups; j++){
 
       if(retira_conjunto(remaining->remainingGroups, candidates[i].groups[j]) == -1){
-        printf("Grupo %d do candidato %d já coberto\n", candidates[i].groups[j], i);
+        //printf("Grupo %d do candidato %d já coberto\n", candidates[i].groups[j], i);
       } else{
-        printf("Grupo %d do candidato %d não coberto\n", candidates[i].groups[j], i);
+        //printf("Grupo %d do candidato %d não coberto\n", candidates[i].groups[j], i);
         canBeAdded = true;
       }
     }
@@ -81,7 +75,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
       for(int j = 0; j < candidates[i].numGroups; j++){
         insere_conjunto(remaining->remainingGroups, candidates[i].groups[j]);
-        printf("Grupo %d do candidato %d reestabelecido\n", candidates[i].groups[j], i);
+        //printf("Grupo %d do candidato %d reestabelecido\n", candidates[i].groups[j], i);
       }
     }
   }

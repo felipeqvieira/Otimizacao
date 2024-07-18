@@ -67,10 +67,12 @@ int pertence (conjunto_t *c, int elemento){
 
     }
     
-    if(fim < ini)
+    if(fim < ini){
       return -1;
-    else 
+    }
+    else{
       return meio;
+    }
   }
 
 }
@@ -308,4 +310,13 @@ void imprime(conjunto_t *c){
 
   printf("\n");
 
+}
+
+int presente(conjunto_t *conjunto, int elemento) {
+    for (int i = 0; i < conjunto->card; i++) {
+        if (conjunto->v[i] == elemento) {
+            return 1; // Retorna positivo se o elemento está no conjunto
+        }
+    }
+    return 0; // Retorna zero se o elemento não está no conjunto
 }

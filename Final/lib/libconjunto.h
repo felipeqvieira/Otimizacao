@@ -122,3 +122,4 @@ int incrementar_iterador (conjunto_t *c, int *elemento);
  */
 int retirar_um_elemento (conjunto_t *c);
 
+int presente(conjunto_t *conjunto, int elemento);

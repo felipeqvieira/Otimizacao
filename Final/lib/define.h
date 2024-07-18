@@ -36,8 +36,10 @@ int todosGruposCobertos(conjunto_t *solution);
 
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
 
-bool limitantFunction(conjunto_t *solution, Remaining *remaining);
+void clCalcule(Remaining *remaining, conjunto_t *cl);
 
-clCalcule(Remaining *remaining, conjunto_t *cl);
+int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining);
 
-boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining);
+void print_candidates(Candidate *candidates, int num_candidates);
+
+void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
