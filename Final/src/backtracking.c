@@ -51,14 +51,14 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
   boundCalcule(improvements->cl, result->solution, remaining);
   
 
-  for(int i = currentLevel; i < qtdCandidates; i++){
+  for(int i = currentLevel; i < improvements->cl->card; i++){
 
     //printf("Candidato  %d\n", i);
     bool canBeAdded = false;
 
-    for(int j = 0; j < candidates[i].numGroups; j++){
+    for(int j = 0; j < candidates[improvements->cl->v[i]].numGroups; j++){
 
-      if(retira_conjunto(remaining->remainingGroups, candidates[i].groups[j]) == -1){
+      if(retira_conjunto(remaining->remainingGroups, candidates[improvements->cl->v[i]].groups[j]) == -1){
         //printf("Grupo %d do candidato %d já coberto\n", candidates[i].groups[j], i);
       } else{
         //printf("Grupo %d do candidato %d não coberto\n", candidates[i].groups[j], i);
@@ -67,14 +67,14 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     }
 
     if(canBeAdded){
-      insere_conjunto(result->solution, i);
-      retira_conjunto(remaining->remainingCandidates, i);
+      insere_conjunto(result->solution, improvements->cl->v[i]);
+      retira_conjunto(remaining->remainingCandidates, improvements->cl->v[i]);
       backTracking(currentLevel+1, result, remaining, improvements, options);
-      insere_conjunto(remaining->remainingCandidates, i);
-      retira_conjunto(result->solution, i);
+      insere_conjunto(remaining->remainingCandidates, improvements->cl->v[i]);
+      retira_conjunto(result->solution, improvements->cl->v[i]);
 
       for(int j = 0; j < candidates[i].numGroups; j++){
-        insere_conjunto(remaining->remainingGroups, candidates[i].groups[j]);
+        insere_conjunto(remaining->remainingGroups, candidates[improvements->cl->v[i]].groups[j]);
         //printf("Grupo %d do candidato %d reestabelecido\n", candidates[i].groups[j], i);
       }
     }
