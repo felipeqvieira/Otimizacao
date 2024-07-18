@@ -26,7 +26,7 @@ int todosGruposCobertos(conjunto_t *solution){
 
 }
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options){
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options options){
 
   if(result->solution->card > result->definitiveSolution->card)
     return ;

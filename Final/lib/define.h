@@ -24,17 +24,19 @@ typedef struct{
 }Improvements;
 
 typedef struct{
-  int otimalidade;
-  int viabilidade;
-  int fprofessor;
+  bool pruneOptimality;
+  bool pruneFeasibility;
+  bool boundProf;
 }Options;
 
 extern int qtdGroups, qtdCandidates;
 extern Candidate *candidates;
 
+void printOptions(Options options);
+
 int todosGruposCobertos(conjunto_t *solution);
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options options);
 
 void clCalcule(Remaining *remaining, conjunto_t *cl);
 

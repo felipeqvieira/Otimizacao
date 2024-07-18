@@ -1,10 +1,41 @@
 #include "../lib/define.h"
+#include <getopt.h>
 
 Candidate *candidates; // Vetor de candidatos
 conjunto_t *groupCovered; // Indica se um grupo já foi coberto
 int qtdGroups, qtdCandidates;
 
-int main(){
+int main(int argc, char *argv[]){
+
+  Options options = {false, false, false};
+
+  /* Verifica os parâmetros passados na entrada e ativa as devidas opções. */
+  if(argc == 1) {
+    options.pruneFeasibility = true;
+    options.pruneOptimality = true;
+  }
+  else {
+    
+    int opt;
+    while ((opt = getopt(argc, argv, "foa")) != -1) {
+      switch (opt) {
+        case 'f':
+          options.pruneFeasibility = true;
+          break;
+        case 'o':
+          options.pruneOptimality = true;
+          break;
+        case 'a':
+          options.boundProf = true;
+          break;
+        default:
+          fprintf(stderr, "Usage: %s [-f] [-o] [-a]\n", argv[0]);
+          exit(EXIT_FAILURE);
+      }
+    }
+
+  }
+  printOptions(options);
 
   scanf("%d %d", &qtdGroups, &qtdCandidates);
 
@@ -29,11 +60,6 @@ int main(){
   Remaining *remaining = (Remaining *)alocar_memoria(1, sizeof(Remaining));
   remaining->remainingGroups = cria_conjunto(qtdGroups);
   remaining->remainingCandidates = cria_conjunto(qtdCandidates);
-
-  Options *options = (Options *)alocar_memoria(1, sizeof(Options));
-  options->otimalidade = 0;
-  options->viabilidade = 0;
-  options->fprofessor = 0;
 
   Improvements *improvements = (Improvements *)alocar_memoria(1, sizeof(Improvements));
   improvements->cl = cria_conjunto(qtdCandidates);

@@ -23,6 +23,13 @@ void print_candidates(Candidate *candidates, int num_candidates) {
   // printf("\n");
 }
 
+void printOptions(Options options) {
+    printf("Options:\n");
+    printf("  Prune Optimality: %s\n", options.pruneOptimality ? "ON" : "OFF");
+    printf("  Prune Feasibility: %s\n", options.pruneFeasibility ? "ON" : "OFF");
+    printf("  Bound Prof: %s\n", options.boundProf ? "ON" : "OFF");
+}
+
 void *alocar_memoria(size_t qtd, size_t size_of_struct) {
     void *ptr = malloc(qtd * size_of_struct);
 
