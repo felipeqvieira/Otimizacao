@@ -22,3 +22,14 @@ void print_candidates(Candidate *candidates, int num_candidates) {
   }
   // printf("\n");
 }
+
+void *alocar_memoria(size_t qtd, size_t size_of_struct) {
+    void *ptr = malloc(qtd * size_of_struct);
+
+    if (ptr == NULL) {
+        printf("Erro ao alocar memória\n");
+        return NULL;
+    }
+
+    return ptr;
+}

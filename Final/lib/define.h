@@ -43,3 +43,11 @@ int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining);
 void print_candidates(Candidate *candidates, int num_candidates);
 
 void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
+
+int compare_candidates_by_groups(const void *a, const void *b);
+
+void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
+
+void print_candidates(Candidate *candidates, int num_candidates);
+
+void *alocar_memoria(size_t qtd, size_t size_of_struct);
