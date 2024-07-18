@@ -38,3 +38,14 @@ int todosGruposCobertos(conjunto_t *solution);
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
 
 bool limitantFunction(conjunto_t *solution, Remaining *remaining);
+
+void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
+/*
+  Ordena os candidatos de forma decrescente em relação
+  ao número de grupos cobertos por cada um.
+*/
+
+void print_candidates(Candidate *candidates, int num_candidates);
+/*
+  Imprime os candidatos e os grupos que cada um cobre.
+*/

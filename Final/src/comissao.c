@@ -6,6 +6,7 @@ int qtdGroups, qtdCandidates;
 
 int main(){
 
+  printf("Grupos e Candidatos:\n");
   scanf("%d %d", &qtdGroups, &qtdCandidates);
 
   // cria conjunto de grupos cobertos e adiciona todos os grupos nele
@@ -15,23 +16,40 @@ int main(){
     insere_conjunto(groupCovered, i);
   }
 
-  // alocação de memória
   candidates = (Candidate *) malloc(qtdCandidates * sizeof(Candidate));
-
   if(candidates == NULL){
     printf("Erro ao alocar memória para os candidatos\n");
     return 1;
   }
 
-  Result *result = (Result *) malloc(sizeof(Result));
+  /* Lê a quantidade de grupos de cada candidato e os grupos quais ele participa */
+  for(int i = 0; i < qtdCandidates; i++){
 
+    scanf("%d", &candidates[i].numGroups);
+    
+    candidates[i].groups = (int *) malloc(candidates[i].numGroups * sizeof(int));
+    
+    if(candidates[i].groups == NULL){
+      printf("Erro ao alocar memória para os grupos do candidato %d\n", i);
+      return 1;
+    }
+
+    for(int j = 0; j < candidates[i].numGroups; j++)
+      scanf("%d", &candidates[i].groups[j]);
+  }
+
+  print_candidates(candidates, qtdCandidates);
+  sort_candidates_by_groups(candidates, qtdCandidates);
+  print_candidates(candidates, qtdCandidates);
+  printf("\n");
+
+  Result *result = (Result *) malloc(sizeof(Result));
   if(result == NULL){
     printf("Erro ao alocar memória para a solução\n");
     return 1;
   }
 
   result->solution = cria_conjunto(qtdCandidates);
-
   result->definitiveSolution = cria_conjunto(qtdCandidates);
   
   for(int i = 0; i < qtdCandidates; i++){
@@ -39,7 +57,6 @@ int main(){
   }
 
   Remaining *remaining = (Remaining *) malloc(sizeof(Remaining));
-
   if(remaining == NULL){
     printf("Erro ao alocar memória para os grupos restantes\n");
     return 1;
@@ -56,41 +73,14 @@ int main(){
     insere_conjunto(remaining->remainingCandidates, i);
   }
 
-  // lê as entradas
-  for(int i = 0; i < qtdCandidates; i++){
-
-    scanf("%d", &candidates[i].numGroups);
-    
-    candidates[i].groups = (int *) malloc(candidates[i].numGroups * sizeof(int));
-    
-    if(candidates[i].groups == NULL){
-      printf("Erro ao alocar memória para os grupos do candidato %d\n", i);
-      return 1;
-    }
-
-    for(int j = 0; j < candidates[i].numGroups; j++)
-      scanf("%d", &candidates[i].groups[j]);
-    
-  }
-
-  //rintf("\nGrupos: %d\n", qtdGroups);
-  //printf("Candidatos: %d\n", qtdCandidates);
-
-  //for(int i = 0; i < qtdCandidates; i++){
-    //printf("\nCandidato %d: ", i);
-    //for(int j = 0; j < candidates[i].numGroups; j++){
-      //printf("%d ", candidates[i].groups[j]);
-   // }
-  //}
-
   Options *options = (Options *) malloc(sizeof(Options));
-
+  /* To do: testar malloc */
   options->otimalidade = 0;
   options->viabilidade = 0;
   options->fprofessor = 0;
 
   Improvements *improvements = (Improvements *) malloc(sizeof(Improvements));
-
+  /* To do: testar malloc */
   improvements->cl = cria_conjunto(qtdCandidates);
   improvements->bound = cria_conjunto(qtdCandidates);
 
