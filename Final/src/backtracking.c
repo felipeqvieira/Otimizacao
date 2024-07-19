@@ -41,7 +41,10 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
   Calculo Cl = Quais candidatos podem ser selecionados?
   */
 
- clCalcule(remaining, improvements->cl);
+  clCalcule(remaining, improvements->cl);
+
+ //printf("Cl: ");
+ //imprime(improvements->cl);
 
  /*
   Calculo Bound
@@ -49,6 +52,9 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
   2. Com o candidato que cobre mais grupos, a solução fica melhor que a já calculada?
  */
   boundCalcule(improvements->cl, result->solution, remaining);
+
+  //printf("Cl depois do Bound: ");
+  //imprime(improvements->cl);
   
 
   for(int i = currentLevel; i < improvements->cl->card; i++){

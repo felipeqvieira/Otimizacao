@@ -6,6 +6,9 @@ int qtdGroups, qtdCandidates;
 
 int main(int argc, char *argv[]){
 
+  clock_t start, end;
+  double cpu_time_used;
+
   Options options = {false, false, false};
 
   /* Verifica os parâmetros passados na entrada e ativa as devidas opções. */
@@ -72,16 +75,13 @@ int main(int argc, char *argv[]){
     insere_conjunto(remaining->remainingGroups, i+1);
   }
 
-  for(int i = 0; i < qtdCandidates; i++){
-    insere_conjunto(remaining->remainingCandidates, i);
-  }
-
   // lê as entradas
   for(int i = 0; i < qtdCandidates; i++){
 
     scanf("%d", &candidates[i].numGroups);
     
     candidates[i].groups = (int *) malloc(candidates[i].numGroups * sizeof(int));
+    candidates[i].id = i+1;
     
     if(candidates[i].groups == NULL){
       printf("Erro ao alocar memória para os grupos do candidato %d\n", i);
@@ -93,25 +93,38 @@ int main(int argc, char *argv[]){
     
   }
 
-  if(isInviable(candidates)){
+  if(isInfeasible(candidates)){
     printf("Solução inviável\n");
     return 1;
   }
 
   sortCandidatesByGroup(candidates);
 
+  for(int i = 0; i < qtdCandidates; i++){
+    insere_conjunto(remaining->remainingCandidates, i);
+  }
+
+  printf("Candidatos restantes: ");
+  imprime(remaining->remainingCandidates);
+  
   //printa candidatos
   for(int i = 0; i < qtdCandidates; i++){
-    printf("Candidato %d cobre %d grupos\n", i, candidates[i].numGroups);
+    printf("Candidato %d Id %d cobre %d grupos\n", i, candidates[i].id, candidates[i].numGroups);
     printf("Grupos: ");
     for(int j = 0; j < candidates[i].numGroups; j++)
       printf("%d ", candidates[i].groups[j]);
     printf("\n");
-  }
-
+  } 
+  
+  start = clock();
   backTracking(0, result, remaining, improvements, &options);
+  end = clock();
 
-  imprime(result->definitiveSolution);
+  cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
+  imprime_solucao(result->definitiveSolution, candidates);
+
+  printf("Tempo de CPU usado no BackTracking: %f segundos\n", cpu_time_used);
 
   return 0;
   

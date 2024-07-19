@@ -54,3 +54,11 @@ void sortCandidatesByGroup(Candidate *candidate){
    }
    
 }
+
+void imprime_solucao(conjunto_t *c, Candidate *candidates){
+
+   for (int i = 0; i < c->card; i++)
+    printf("%d ", candidates[c->v[i]].id);
+
+  printf("\n");
+}

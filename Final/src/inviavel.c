@@ -1,20 +1,43 @@
 #include "../lib/define.h"
 
-bool isInviable(Candidate *candidates){
+bool isInfeasible(Candidate *candidates){
 
-  bool *groupCovered = (bool *)calloc(qtdGroups, sizeof(bool));
+  int *groupCovered = (int *)alocar_memoria(qtdGroups, sizeof(int));
+
+  int count = 0;
 
   for(int i = 0; i < qtdCandidates; i++)
     for(int j = 0; j < candidates[i].numGroups; j++){
-      groupCovered[candidates[i].groups[j]] = true;
-      printf("Grupo %d coberto\n", candidates[i].groups[j]);
+
+      if(! isCovered(groupCovered, candidates[i].groups[j])){
+        
+        if(count < qtdGroups){
+          groupCovered[count] = candidates[i].groups[j];
+        }
+
+        count++;
+
+        if(count > qtdGroups){
+          return 1;
+        }
+          
+      }      
     }
 
-  for(int i = 1; i < qtdGroups; i++)
-    if(!groupCovered[i]){
-      printf("Grupo %d não coberto\n", i);
-      return true;
-    }
-  
-  return false;
+  if(count < qtdGroups)
+    return 1;
+
+  return 0;
+
+}
+
+int isCovered(int *groupCovered, int valor){
+
+  for(int i = 0; i < qtdGroups; i++){
+    if(groupCovered[i] == valor)
+      return 1;
+  }
+
+  return 0;
+
 }

@@ -3,11 +3,13 @@
 #include <stdbool.h>
 #include <string.h>
 #include <getopt.h>
+#include <time.h>
 #include "libconjunto.h"
 
 typedef struct{
   int numGroups;
   int* groups;
+  int id;
 }Candidate;
 
 typedef struct{
@@ -45,6 +47,10 @@ void *alocar_memoria(size_t qtd, size_t size_of_struct);
 
 void printOptions(Options options);
 
-bool isInviable(Candidate *candidates);
+bool isInfeasible(Candidate *candidates);
+
+int isCovered(int *groupCovered, int valor);
 
 void sortCandidatesByGroup(Candidate *candidate);
+
+void imprime_solucao(conjunto_t *c, Candidate *candidates);

@@ -83,6 +83,7 @@ int insere_conjunto(conjunto_t *c, int elemento){
 
   if (pertence(c,elemento) > -1)
     return 0;
+  
 
   if (conjunto_vazio(c) == 1 && c->max != 0){
 
@@ -94,17 +95,17 @@ int insere_conjunto(conjunto_t *c, int elemento){
 
   } else if (c->card < c->max){
 
-    i = c->card -1;
+    i = c->card;
 
+    /*
     while (i >= 0 && elemento < c->v[i]){
 
       c->v[i+1] = c->v[i];
       i--;
 
     }
-
-    c->v[i+1] = elemento;
-
+    */
+    c->v[i] = elemento;
     c->card++;
 
     return 1;
