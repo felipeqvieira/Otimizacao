@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <getopt.h>
 #include "libconjunto.h"
 
 typedef struct{
@@ -24,9 +25,9 @@ typedef struct{
 }Improvements;
 
 typedef struct{
-  int otimalidade;
-  int viabilidade;
-  int fprofessor;
+  bool pruneOptimality;
+  bool pruneFeasibility;
+  bool boundProf;
 }Options;
 
 extern int qtdGroups, qtdCandidates;
@@ -40,14 +41,10 @@ void clCalcule(Remaining *remaining, conjunto_t *cl);
 
 int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining);
 
-void print_candidates(Candidate *candidates, int num_candidates);
-
-void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
-
-int compare_candidates_by_groups(const void *a, const void *b);
-
-void sort_candidates_by_groups(Candidate *candidates, int num_candidates);
-
-void print_candidates(Candidate *candidates, int num_candidates);
-
 void *alocar_memoria(size_t qtd, size_t size_of_struct);
+
+void printOptions(Options options);
+
+bool isInviable(Candidate *candidates);
+
+void sortCandidatesByGroup(Candidate *candidate);

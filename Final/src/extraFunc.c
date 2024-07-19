@@ -33,3 +33,24 @@ void *alocar_memoria(size_t qtd, size_t size_of_struct) {
 
     return ptr;
 }
+
+void printOptions(Options options) {
+    printf("Options:\n");
+    printf("  Prune Optimality: %s\n", options.pruneOptimality ? "ON" : "OFF");
+    printf("  Prune Feasibility: %s\n", options.pruneFeasibility ? "ON" : "OFF");
+    printf("  Bound Prof: %s\n", options.boundProf ? "ON" : "OFF");
+}
+
+void sortCandidatesByGroup(Candidate *candidate){
+
+   for(int i = 0; i < qtdCandidates; i++){
+    for(int j = i+1; j < qtdCandidates; j++){
+      if(candidate[i].numGroups < candidate[j].numGroups){
+        Candidate aux = candidate[i];
+        candidate[i] = candidate[j];
+        candidate[j] = aux;
+      }
+    }
+   }
+   
+}

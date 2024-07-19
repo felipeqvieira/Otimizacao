@@ -4,9 +4,44 @@ Candidate *candidates; // Vetor de candidatos
 conjunto_t *groupCovered; // Indica se um grupo já foi coberto
 int qtdGroups, qtdCandidates;
 
-int main(){
+int main(int argc, char *argv[]){
+
+  Options options = {false, false, false};
+
+  /* Verifica os parâmetros passados na entrada e ativa as devidas opções. */
+  if(argc == 1) {
+    options.pruneFeasibility = true;
+    options.pruneOptimality = true;
+  }
+  else {
+    
+    int opt;
+    while ((opt = getopt(argc, argv, "foa")) != -1) {
+      switch (opt) {
+        case 'f':
+          options.pruneFeasibility = true;
+          break;
+        case 'o':
+          options.pruneOptimality = true;
+          break;
+        case 'a':
+          options.boundProf = true;
+          break;
+        default:
+          fprintf(stderr, "Usage: %s [-f] [-o] [-a]\n", argv[0]);
+          exit(EXIT_FAILURE);
+      }
+    }
+
+  }
+  printOptions(options);
 
   scanf("%d %d", &qtdGroups, &qtdCandidates);
+
+  if(qtdGroups < 1 || qtdCandidates < 1){
+    printf("Erro: quantidade de grupos ou candidatos inválida\n");
+    return 1;
+  }
 
   // cria conjunto de grupos cobertos e adiciona todos os grupos nele
   groupCovered = cria_conjunto(qtdGroups);
@@ -29,11 +64,6 @@ int main(){
   Remaining *remaining = (Remaining *)alocar_memoria(1, sizeof(Remaining));
   remaining->remainingGroups = cria_conjunto(qtdGroups);
   remaining->remainingCandidates = cria_conjunto(qtdCandidates);
-
-  Options *options = (Options *)alocar_memoria(1, sizeof(Options));
-  options->otimalidade = 0;
-  options->viabilidade = 0;
-  options->fprofessor = 0;
 
   Improvements *improvements = (Improvements *)alocar_memoria(1, sizeof(Improvements));
   improvements->cl = cria_conjunto(qtdCandidates);
@@ -63,7 +93,23 @@ int main(){
     
   }
 
-  backTracking(0, result, remaining, improvements, options);
+  if(isInviable(candidates)){
+    printf("Solução inviável\n");
+    return 1;
+  }
+
+  sortCandidatesByGroup(candidates);
+
+  //printa candidatos
+  for(int i = 0; i < qtdCandidates; i++){
+    printf("Candidato %d cobre %d grupos\n", i, candidates[i].numGroups);
+    printf("Grupos: ");
+    for(int j = 0; j < candidates[i].numGroups; j++)
+      printf("%d ", candidates[i].groups[j]);
+    printf("\n");
+  }
+
+  backTracking(0, result, remaining, improvements, &options);
 
   imprime(result->definitiveSolution);
 
