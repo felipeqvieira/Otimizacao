@@ -1,0 +1,210 @@
+
+=====================================
+
+Função Main
+
+Options:
+  Prune Optimality: ON
+  Prune Feasibility: ON
+  Bound Prof: OFF
+
+=====================================
+
+Função BackTracking
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+Função TDC: Solução vazia!
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 2 3 4 
+
+
+Inicializando for com i = 0
+
+Remaining Groups: 4 5 6 
+
+=====================================
+
+Função boundCalcule
+
+Cl->card: 5
+
+Quantidade de grupos restantes: 3
+Quantidade Total de Grupo de todos os candidatos: 12
+Média de grupos por candidato: 2
+Mínimo de candidatos necessários: 1
+Função retornou 1
+
+=====================================
+Solution: 0 
+
+Remaining Candidates: 1 2 3 4 
+
+Remaining Groups: 4 5 6 
+Chamando backtracking i = 0
+
+=====================================
+
+Função BackTracking
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+Solution: 0 
+
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 1 2 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 3 4 
+
+
+Inicializando for com i = 0
+
+Remaining Groups: 5 
+
+=====================================
+
+Função boundCalcule
+
+Cl->card: 4
+
+Quantidade de grupos restantes: 1
+Quantidade Total de Grupo de todos os candidatos: 9
+Média de grupos por candidato: 2
+Mínimo de candidatos necessários: 0
+Função retornou 1
+
+=====================================
+Solution: 0 1 
+
+Remaining Candidates: 2 3 4 
+
+Remaining Groups: 5 
+Chamando backtracking i = 0
+
+=====================================
+
+Função BackTracking
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+Solution: 0 1 
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 1 2 3 4 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Remaining Groups: 
+
+=====================================
+
+Função boundCalcule
+
+Cl->card: 2
+
+Quantidade de grupos restantes: 0
+Quantidade Total de Grupo de todos os candidatos: 4
+Média de grupos por candidato: 2
+Mínimo de candidatos necessários: 0
+Função retornou 1
+
+=====================================
+Solution: 0 1 3 
+
+Remaining Candidates: 2 4 
+
+Remaining Groups: 
+Chamando backtracking i = 0
+
+=====================================
+
+Função BackTracking
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+Solution: 0 1 3 
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+Solução com o ultimo retirado: 0 1 
+Grupos restantes: 5 
+Definitive Solution: 0 1 3 
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 4 
+
+Saiu fora!
+Saiu fora!
+Saiu fora!
+Saiu fora!
+1 4 2 
+Tempo de CPU usado no BackTracking: 0.000018 segundos
+
+=====================================
