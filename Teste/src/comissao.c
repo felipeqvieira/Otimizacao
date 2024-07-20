@@ -1,21 +1,26 @@
 #include "../lib/define.h"
 
-Candidate *candidates; // Vetor de candidatos
-conjunto_t *groupCovered; // Indica se um grupo já foi coberto
+Candidate *candidates;
+conjunto_t *groupCovered;
+
 int qtdGroups, qtdCandidates;
 
 int main(int argc, char *argv[]){
+
+  printf("\n=====================================\n");
+
+  printf("\nFunção Main\n\n");
 
   clock_t start, end;
   double cpu_time_used;
 
   Options options = {true, true, false};
- 
-  /* Verifica os parâmetros passados na entrada e ativa as devidas opções. */
-    
+
   int opt;
-  while ((opt = getopt(argc, argv, "foa")) != -1) {
-    switch (opt) {
+
+  while((opt = getopt(argc, argv, "foa")) != -1){
+
+    switch(opt){
       case 'f':
         options.pruneFeasibility = false;
         break;
@@ -25,12 +30,12 @@ int main(int argc, char *argv[]){
       case 'a':
         options.boundProf = true;
         break;
-      default:
+      default: 
         fprintf(stderr, "Usage: %s [-f] [-o] [-a]\n", argv[0]);
         exit(EXIT_FAILURE);
     }
   }
-  
+
   printOptions(options);
 
   scanf("%d %d", &qtdGroups, &qtdCandidates);
@@ -100,19 +105,6 @@ int main(int argc, char *argv[]){
     insere_conjunto(remaining->remainingCandidates, i);
   }
 
-  //printf("Candidatos restantes: ");
-  //imprime(remaining->remainingCandidates);
-  
-  //printa candidatos
-  /*for(int i = 0; i < qtdCandidates; i++){
-    printf("Candidato %d Id %d cobre %d grupos\n", i, candidates[i].id, candidates[i].numGroups);
-    printf("Grupos: ");
-    for(int j = 0; j < candidates[i].numGroups; j++)
-      printf("%d ", candidates[i].groups[j]);
-    printf("\n");
-  } 
-  */
-  
   start = clock();
   backTracking(0, result, remaining, improvements, &options);
   end = clock();
@@ -123,6 +115,9 @@ int main(int argc, char *argv[]){
 
   printf("Tempo de CPU usado no BackTracking: %f segundos\n", cpu_time_used);
 
+  printf("\n=====================================\n");
+
   return 0;
-  
+
+
 }

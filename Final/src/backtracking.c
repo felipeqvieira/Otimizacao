@@ -28,8 +28,10 @@ int todosGruposCobertos(conjunto_t *solution){
 
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options){
 
-  if(result->solution->card > result->definitiveSolution->card)
-    return ;
+  //if(options->pruneOptimality){
+    if(result->solution->card > result->definitiveSolution->card)
+      return ;
+  //}
 
   if(todosGruposCobertos(result->solution)){
     destroi_conjunto(result->definitiveSolution);
@@ -37,26 +39,56 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     return ;
   }
 
+  bool *grupoCoberto = calloc(qtdGroups, sizeof(bool));
+
+  if(grupoCoberto == NULL){
+    printf("Erro ao alocar memória para grupoCoberto\n");
+    return ;
+  }
+
   /*
   Calculo Cl = Quais candidatos podem ser selecionados?
   */
+  if(options->pruneFeasibility) 
+    clCalcule(remaining, improvements->cl, grupoCoberto);
 
-  clCalcule(remaining, improvements->cl);
-
- //printf("Cl: ");
- //imprime(improvements->cl);
+  printf("Cl: ");
+  imprime(improvements->cl);
 
  /*
   Calculo Bound
   1. Desses candidatos, ordernar por quem cobre mais grupo
   2. Com o candidato que cobre mais grupos, a solução fica melhor que a já calculada?
  */
-  boundCalcule(improvements->cl, result->solution, remaining);
 
-  //printf("Cl depois do Bound: ");
-  //imprime(improvements->cl);
   
+  if(options->pruneOptimality){ 
+    // cortes por otimalidade ativados
+    if(options->pruneFeasibility){
+      //cortes por viabilidade ativados
+      if(! boundCalcule(improvements->cl, result->solution, grupoCoberto)){
+        printf("Bound cortou!\n");
+        return ;
+      }
+    }
+    else {
+      // cortes por viabilidade desativados
+      if(! boundCalcule(remaining->remainingCandidates, result->solution, grupoCoberto)){
+        printf("Bound cortou!\n");
+        return ;
+      }
+      else{
+        destroi_conjunto(improvements->cl);
+        improvements->cl = cria_copia(remaining->remainingCandidates);
+      }
+    }
+  }
 
+  free(grupoCoberto);
+
+  printf("Cl depois do Bound: ");
+  imprime(improvements->cl);
+  
   for(int i = currentLevel; i < improvements->cl->card; i++){
 
     //printf("Candidato  %d\n", i);

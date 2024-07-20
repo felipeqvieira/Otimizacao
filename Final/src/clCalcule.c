@@ -1,10 +1,8 @@
 #include "../lib/define.h"
 
-void clCalcule(Remaining *remaining, conjunto_t *cl){
+void clCalcule(Remaining *remaining, conjunto_t *cl, bool *grupoCoberto){
 
-  bool *grupoCoberto = (bool *)malloc(qtdGroups * sizeof(bool));
-
-  //printf("Função clCalcule: Calculando CL\n");
+  printf("Função clCalcule: Calculando CL\n");
 
   for (int i = 0; i < remaining->remainingCandidates->card; i++) {
     

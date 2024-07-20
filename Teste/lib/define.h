@@ -40,9 +40,9 @@ int todosGruposCobertos(conjunto_t *solution);
 
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
 
-void clCalcule(Remaining *remaining, conjunto_t *cl, bool *grupoCoberto);
+void clCalcule(Remaining *remaining, conjunto_t *cl, Result *result);
 
-int boundCalcule(conjunto_t *cl, conjunto_t *solution, bool *grupoCoberto);
+int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining);
 
 void *alocar_memoria(size_t qtd, size_t size_of_struct);
 
@@ -50,8 +50,8 @@ void printOptions(Options options);
 
 bool isInfeasible(Candidate *candidates);
 
-int isCovered(int *groupCovered, int valor);
-
 void sortCandidatesByGroup(Candidate *candidate);
 
 void imprime_solucao(conjunto_t *c, Candidate *candidates);
+
+int isCovered(int *groupCovered, int valor);

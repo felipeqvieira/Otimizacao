@@ -1,12 +1,21 @@
 #include "../lib/define.h"
 
-int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining){
+int boundCalcule(conjunto_t *cl, conjunto_t *solution, bool *grupoCoberto){
+
+  if(cl->card == 0)
+    return 0;
+
+  int lastGroups = 0;
+
+  for(int i = 0; i < qtdGroups; i++)
+    if(! grupoCoberto[i])
+      lastGroups++;
 
   int mediaGruposPorCandidato = 0;
 
   //printf("Função boundCalcule: Calculando Bound\n");
 
-  for(int i = 0; i < cl->card; i++){
+  /*for(int i = 0; i < cl->card; i++){
     for(int j = i+1; j < cl->card; j++){
       if(candidates[cl->v[i]].numGroups < candidates[cl->v[j]].numGroups){
         int aux = cl->v[i];
@@ -15,6 +24,7 @@ int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining){
       }
     }
   }
+  */
 
   //printf("Função boundCalcule: Candidatos ordenados por grupos cobertos\n");
 
@@ -28,15 +38,13 @@ int boundCalcule(conjunto_t *cl, conjunto_t *solution, Remaining *remaining){
   //printf("Função boundCalcule: Média de grupos por candidato: %d\n", mediaGruposPorCandidato);
   //printf("Função boundCalcule: Card do cl: %d\n", cl->card);
 
-  mediaGruposPorCandidato /= cl->card;
+  mediaGruposPorCandidato  = ceil(mediaGruposPorCandidato/cl->card);
 
   //printf("Função boundCalcule: Média de grupos por candidato depois da divisão: %d\n", mediaGruposPorCandidato);
 
-  int minimoCandidatosNecessarios = remaining->remainingGroups->card / mediaGruposPorCandidato;
+  int minimoCandidatosNecessarios = ceil(lastGroups / mediaGruposPorCandidato);
 
-  minimoCandidatosNecessarios++;
-
-  //printf("Função boundCalcule: Mínimo de candidatos necessários: %d\n", minimoCandidatosNecessarios);
+  printf("Função boundCalcule: Mínimo de candidatos necessários: %d\n", minimoCandidatosNecessarios);
   
   //printf("Função boundCalcule: Grupos restantes: ");
   //imprime(remaining->remainingGroups);
