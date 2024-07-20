@@ -50,6 +50,7 @@ int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining)
     B(E,F) = Número de candidatos escolhidos + 
     (Nº grupos não cobertos / número máximo de grupos que um candidato restante cobre)
   */
+  if (remaining->remainingCandidates->card == 0) return 0;
 
   int num_remaining_groups = remaining->remainingGroups->card;
 
