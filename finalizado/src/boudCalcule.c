@@ -63,5 +63,7 @@ int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining)
   }
   
   /* B(E,F) =  |E| + MinCandidates */
-  return result->solution->card + ceil(num_remaining_groups / max_groups_per_candidate);
+  int minCandidates = result->solution->card + ceil(num_remaining_groups / max_groups_per_candidate);
+
+  return minCandidates;
 }
