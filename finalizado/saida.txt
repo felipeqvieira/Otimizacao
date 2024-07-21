@@ -10,7 +10,7 @@ Options:
 
 =====================================
 
-Função BackTracking
+Função BackTracking (Nivel: 0)
 
 
 =====================================
@@ -37,38 +37,33 @@ Cl: 0 1 2 3 4
 
 Inicializando for com i = 0
 
-Remaining Groups: 4 5 6 
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 2 3 4 5 6 
+
+Resultado da diferença: 4 5 6 
+
+Candidatos restantes: 0 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 
+
+Candidatos restantes: 1 2 3 4 
+
+Grupos restantes: 4 5 6 
+
+Chamando Backtracking 1
 
 =====================================
 
-Função boundCalcule
-
-Cl->card: 5
-
-Quantidade de grupos restantes: 3
-Quantidade Total de Grupo de todos os candidatos: 12
-Média de grupos por candidato: 2
-Mínimo de candidatos necessários: 1
-Função retornou 1
-
-=====================================
-Solution: 0 
-
-Remaining Candidates: 1 2 3 4 
-
-Remaining Groups: 4 5 6 
-Chamando backtracking i = 0
-
 =====================================
 
-Função BackTracking
+Função BackTracking (Nivel: 1)
 
 
 =====================================
 
 Função: Todos Grupos Cobertos!
 
-Solution: 0 
 
 Grupo inserido: 1 2 3 
 
@@ -92,38 +87,33 @@ Cl: 1 2 3 4
 
 Inicializando for com i = 0
 
-Remaining Groups: 5 
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 5 6 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 1 
+
+Candidatos restantes: 2 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 2
 
 =====================================
 
-Função boundCalcule
-
-Cl->card: 4
-
-Quantidade de grupos restantes: 1
-Quantidade Total de Grupo de todos os candidatos: 9
-Média de grupos por candidato: 2
-Mínimo de candidatos necessários: 0
-Função retornou 1
-
-=====================================
-Solution: 0 1 
-
-Remaining Candidates: 2 3 4 
-
-Remaining Groups: 5 
-Chamando backtracking i = 0
-
 =====================================
 
-Função BackTracking
+Função BackTracking (Nivel: 2)
 
 
 =====================================
 
 Função: Todos Grupos Cobertos!
 
-Solution: 0 1 
 
 Grupo inserido: 1 2 3 
 Grupo inserido: 2 4 6 
@@ -146,38 +136,33 @@ Cl: 3 4
 
 Inicializando for com i = 0
 
-Remaining Groups: 
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 1 3 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
 
 =====================================
 
-Função boundCalcule
-
-Cl->card: 2
-
-Quantidade de grupos restantes: 0
-Quantidade Total de Grupo de todos os candidatos: 4
-Média de grupos por candidato: 2
-Mínimo de candidatos necessários: 0
-Função retornou 1
-
-=====================================
-Solution: 0 1 3 
-
-Remaining Candidates: 2 4 
-
-Remaining Groups: 
-Chamando backtracking i = 0
-
 =====================================
 
-Função BackTracking
+Função BackTracking (Nivel: 3)
 
 
 =====================================
 
 Função: Todos Grupos Cobertos!
 
-Solution: 0 1 3 
 
 Grupo inserido: 1 2 3 
 Grupo inserido: 2 4 6 
@@ -187,24 +172,8657 @@ Grupo inserido: 4 5
 Todos os grupos cobertos
 
 =====================================
-Solução com o ultimo retirado: 0 1 
-Grupos restantes: 5 
-Definitive Solution: 0 1 3 
+Solução definitiva atualizada: 0 1 3 
+
 
 =====================================
 
 Função clCalcule: Calculando CL
 
+
+=====================================
+Cl: 
+
+Solucao: 0 1 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 0 1 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 2 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 1 4 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 0 1 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 2 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 1 retirado da solução: 0 
+
+Grupos restantes: 4 5 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 3 4 
+
+Cl substituído para: 1 2 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 4 5 6 
+
+Resultado da diferença: 4 5 
+
+Candidatos restantes: 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 
+
+Candidatos restantes: 1 3 4 
+
+Grupos restantes: 4 5 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 1 2 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
 Candidato 4 inserido no conjunto de Cl!
 
 =====================================
-Cl: 4 
+Cl: 1 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 1 
+
+Candidatos restantes: 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 1 2 3 6 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 1 3 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 2 1 3 
 
 Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 0 2 1 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 1 4 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 2 1 4 
+
 Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 0 2 1 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 0 2 1 
+
 Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 0 2 
+
+Grupos restantes: 4 5 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 3 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 2 3 
+
 Saiu fora!
-1 4 2 
-Tempo de CPU usado no BackTracking: 0.000018 segundos
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 0 2 
+
+Grupos restantes: 4 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 0 2 4 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 1 2 3 6 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 0 2 4 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 2 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 0 2 4 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 0 2 4 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 2 4 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 0 2 4 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 0 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 0 2 
+
+Grupos restantes: 4 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+Solucao: 0 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 2 retirado da solução: 0 
+
+Grupos restantes: 4 5 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 3 4 
+
+Cl substituído para: 1 2 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 5 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 3 
+
+Candidatos restantes: 1 2 4 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 1 2 3 4 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 4 
+
+Candidato inserido no conjunto da solução: 0 3 1 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 0 3 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 4 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 4 
+
+Candidato inserido no conjunto da solução: 0 3 2 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 0 3 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 4 
+
+Cl substituído para: 1 2 
+
+Solucao: 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 3 retirado da solução: 0 
+
+Grupos restantes: 4 5 6 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 2 3 4 
+
+Cl substituído para: 1 2 3 4 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 4 5 6 
+
+Resultado da diferença: 4 6 
+
+Candidatos restantes: 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 0 4 
+
+Candidatos restantes: 1 2 3 
+
+Grupos restantes: 4 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 1 2 3 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 0 4 1 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 0 4 
+
+Grupos restantes: 4 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 0 4 2 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 1 2 3 5 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 0 4 2 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 4 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 0 4 2 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 0 4 2 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 4 2 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 0 4 2 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 0 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 0 4 
+
+Grupos restantes: 4 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 0 4 3 
+
+Candidatos restantes: 1 2 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 1 2 3 5 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 0 4 3 1 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 4 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 0 4 3 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 0 4 3 2 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 0 4 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 0 4 3 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+Solucao: 0 4 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 0 4 
+
+Grupos restantes: 4 6 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+Solucao: 0 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 4 retirado da solução: 0 
+
+Grupos restantes: 4 5 6 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 1 2 3 4 
+
+Cl substituído para: 1 2 3 4 
+
+Solucao: 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 0
+Candidato 0 retirado da solução: 
+
+Grupos restantes: 1 2 3 4 5 6 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 2 3 4 
+
+Cl substituído para: 0 1 2 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 1 2 3 4 5 6 
+
+Resultado da diferença: 1 3 5 
+
+Candidatos restantes: 0 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 
+
+Candidatos restantes: 0 2 3 4 
+
+Grupos restantes: 1 3 5 
+
+Chamando Backtracking 1
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 1)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 2 4 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 3 5 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 0 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 0 
+
+Candidatos restantes: 2 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 2 4 6 1 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 0 3 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 1 0 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 2 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 0 4 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 0 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 1 0 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 2 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 0 retirado da solução: 1 
+
+Grupos restantes: 1 3 5 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 3 4 
+
+Cl substituído para: 0 2 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 1 3 5 
+
+Resultado da diferença: 1 5 
+
+Candidatos restantes: 0 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 
+
+Candidatos restantes: 0 3 4 
+
+Grupos restantes: 1 5 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 2 4 6 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 0 
+
+Candidatos restantes: 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 2 4 6 3 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 0 3 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 2 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 1 2 0 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 0 4 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 2 0 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 1 2 0 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 1 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 1 2 
+
+Grupos restantes: 1 5 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 3 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 2 4 6 3 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 1 2 3 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 2 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 1 2 3 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 1 2 3 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 2 3 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 1 2 3 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 1 2 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 1 2 
+
+Grupos restantes: 1 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 1 2 4 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 1 2 
+
+Grupos restantes: 1 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+Solucao: 1 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 2 retirado da solução: 1 
+
+Grupos restantes: 1 3 5 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 3 4 
+
+Cl substituído para: 0 2 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 1 3 5 
+
+Resultado da diferença: 1 3 
+
+Candidatos restantes: 0 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 3 
+
+Candidatos restantes: 0 2 4 
+
+Grupos restantes: 1 3 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 2 4 6 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 1 3 0 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 1 3 
+
+Grupos restantes: 1 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 1 3 2 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 2 4 6 5 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 1 3 2 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 3 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 1 3 2 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 1 3 2 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 3 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 1 3 2 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 1 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 1 3 
+
+Grupos restantes: 1 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 1 3 4 
+
+Candidatos restantes: 0 2 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 2 4 6 5 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 1 3 4 0 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 3 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 1 3 4 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 1 3 4 2 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 3 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 1 3 4 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+Solucao: 1 3 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 1 3 
+
+Grupos restantes: 1 3 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+Solucao: 1 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 3 retirado da solução: 1 
+
+Grupos restantes: 1 3 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 2 3 4 
+
+Cl substituído para: 0 2 3 4 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 3 5 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 2 3 4 
+
+Candidato inserido no conjunto da solução: 1 4 
+
+Candidatos restantes: 0 2 3 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 2 4 6 1 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 3 
+
+Candidato inserido no conjunto da solução: 1 4 0 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 1 4 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 3 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 3 
+
+Candidato inserido no conjunto da solução: 1 4 2 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 1 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 1 4 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 3 
+
+Cl substituído para: 0 2 
+
+Solucao: 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 4 retirado da solução: 1 
+
+Grupos restantes: 1 3 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 2 3 4 
+
+Cl substituído para: 0 2 3 4 
+
+Solucao: 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 0
+Candidato 1 retirado da solução: 
+
+Grupos restantes: 1 2 3 4 5 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 2 3 4 
+
+Cl substituído para: 0 1 2 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 1 2 3 4 5 6 
+
+Resultado da diferença: 1 2 4 5 
+
+Candidatos restantes: 0 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 2 
+
+Candidatos restantes: 0 1 3 4 
+
+Grupos restantes: 1 2 4 5 
+
+Chamando Backtracking 1
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 1)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 2 4 5 
+
+Resultado da diferença: 4 5 
+
+Candidatos restantes: 0 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 
+
+Candidatos restantes: 1 3 4 
+
+Grupos restantes: 4 5 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 3 6 1 2 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 1 
+
+Candidatos restantes: 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 3 6 1 2 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 1 3 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 0 1 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 2 0 1 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 1 4 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 0 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 2 0 1 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 2 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 2 0 
+
+Grupos restantes: 4 5 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 3 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 2 0 
+
+Grupos restantes: 4 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 4 5 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 0 4 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 3 6 1 2 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 2 0 4 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 0 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 2 0 4 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 2 0 4 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 0 4 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 2 0 4 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 2 0 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 2 0 
+
+Grupos restantes: 4 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 1 3 4 
+
+Cl substituído para: 1 3 4 
+
+Solucao: 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 0 retirado da solução: 2 
+
+Grupos restantes: 1 2 4 5 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 3 4 
+
+Cl substituído para: 0 1 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 1 2 4 5 
+
+Resultado da diferença: 1 5 
+
+Candidatos restantes: 0 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 
+
+Candidatos restantes: 0 3 4 
+
+Grupos restantes: 1 5 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 3 6 2 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 5 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 0 
+
+Candidatos restantes: 3 4 
+
+Grupos restantes: 5 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 3 6 2 4 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 3 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 3 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 0 3 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 1 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 2 1 0 
+
+Grupos restantes: 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 0 4 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 1 0 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 2 1 0 
+
+Grupos restantes: 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 3 4 
+
+Cl substituído para: 3 4 
+
+Solucao: 2 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 2 1 
+
+Grupos restantes: 1 5 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 3 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 3 6 2 4 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 2 1 3 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 1 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 2 1 3 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 2 1 3 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 1 3 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 2 1 3 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 2 1 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 2 1 
+
+Grupos restantes: 1 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 5 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 3 4 
+
+Candidato inserido no conjunto da solução: 2 1 4 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 2 1 
+
+Grupos restantes: 1 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 3 4 
+
+Cl substituído para: 0 3 4 
+
+Solucao: 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 1 retirado da solução: 2 
+
+Grupos restantes: 1 2 4 5 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 3 4 
+
+Cl substituído para: 0 1 3 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 1 2 4 5 
+
+Resultado da diferença: 1 2 
+
+Candidatos restantes: 0 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 3 
+
+Candidatos restantes: 0 1 4 
+
+Grupos restantes: 1 2 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 3 6 4 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 2 3 0 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 2 3 
+
+Grupos restantes: 1 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 2 3 1 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 3 6 4 5 2 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 2 3 1 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 3 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 2 3 1 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 2 3 1 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 3 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 2 3 1 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 2 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 2 3 
+
+Grupos restantes: 1 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 2 3 4 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 3 6 4 5 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 2 3 4 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 3 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 2 3 4 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 2 3 4 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 3 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 2 3 4 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 2 3 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 2 3 
+
+Grupos restantes: 1 2 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+Solucao: 2 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 3 retirado da solução: 2 
+
+Grupos restantes: 1 2 4 5 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 1 3 4 
+
+Cl substituído para: 0 1 3 4 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 2 4 5 
+
+Resultado da diferença: 2 4 
+
+Candidatos restantes: 0 1 3 4 
+
+Candidato inserido no conjunto da solução: 2 4 
+
+Candidatos restantes: 0 1 3 
+
+Grupos restantes: 2 4 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 3 6 1 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 2 4 0 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 3 6 1 5 2 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 2 4 0 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 4 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 2 4 0 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 2 4 0 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 4 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 2 4 0 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 2 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 2 4 
+
+Grupos restantes: 2 4 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 2 4 1 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 2 4 
+
+Grupos restantes: 2 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 2 4 3 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 3 6 1 5 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 2 4 3 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 4 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 2 4 3 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 2 4 3 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 2 4 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 2 4 3 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 2 4 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 2 4 
+
+Grupos restantes: 2 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+Solucao: 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 4 retirado da solução: 2 
+
+Grupos restantes: 1 2 4 5 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 1 3 4 
+
+Cl substituído para: 0 1 3 4 
+
+Solucao: 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 0
+Candidato 2 retirado da solução: 
+
+Grupos restantes: 1 2 3 4 5 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 1 2 3 4 
+
+Cl substituído para: 0 1 2 3 4 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 1 2 3 4 5 6 
+
+Resultado da diferença: 1 2 3 6 
+
+Candidatos restantes: 0 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 3 
+
+Candidatos restantes: 0 1 2 4 
+
+Grupos restantes: 1 2 3 6 
+
+Chamando Backtracking 1
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 1)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 4 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 2 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 2 3 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 0 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 0 
+
+Candidatos restantes: 1 2 4 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 4 5 1 2 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 0 1 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 3 0 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 4 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 0 2 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 0 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 3 0 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 4 
+
+Cl substituído para: 1 2 
+
+Solucao: 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 0 retirado da solução: 3 
+
+Grupos restantes: 1 2 3 6 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 2 4 
+
+Cl substituído para: 0 1 2 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 1 2 3 6 
+
+Resultado da diferença: 1 3 
+
+Candidatos restantes: 0 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 1 
+
+Candidatos restantes: 0 2 4 
+
+Grupos restantes: 1 3 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 4 5 2 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 3 1 0 
+
+Candidatos restantes: 2 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 3 1 
+
+Grupos restantes: 1 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 3 1 2 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 4 5 2 6 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 3 1 2 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 1 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 1 2 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 3 1 2 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 1 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 3 1 2 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 3 1 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 3 1 
+
+Grupos restantes: 1 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 3 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 2 4 
+
+Candidato inserido no conjunto da solução: 3 1 4 
+
+Candidatos restantes: 0 2 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 4 5 2 6 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 3 1 4 0 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 1 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 1 4 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 3 1 4 2 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 1 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 3 1 4 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+Solucao: 3 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 3 1 
+
+Grupos restantes: 1 3 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 2 4 
+
+Cl substituído para: 0 2 4 
+
+Solucao: 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 1 retirado da solução: 3 
+
+Grupos restantes: 1 2 3 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 2 4 
+
+Cl substituído para: 0 1 2 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 1 2 3 6 
+
+Resultado da diferença: 1 2 
+
+Candidatos restantes: 0 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 2 
+
+Candidatos restantes: 0 1 4 
+
+Grupos restantes: 1 2 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 4 5 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 3 2 0 
+
+Candidatos restantes: 1 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 3 2 
+
+Grupos restantes: 1 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 1 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 3 2 1 
+
+Candidatos restantes: 0 4 
+
+Grupos restantes: 1 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 4 5 3 6 2 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 4 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 4 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 3 2 1 0 
+
+Candidatos restantes: 4 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 2 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 2 1 
+
+Grupos restantes: 1 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 4 
+
+Candidato inserido no conjunto da solução: 3 2 1 4 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 2 1 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 4 retirado da solução: 3 2 1 
+
+Grupos restantes: 1 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 4 
+
+Cl substituído para: 0 4 
+
+Solucao: 3 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 3 2 
+
+Grupos restantes: 1 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 2 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 4 
+
+Candidato inserido no conjunto da solução: 3 2 4 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 4 5 3 6 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 3 2 4 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 2 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 2 4 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 3 2 4 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 2 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 3 2 4 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 3 2 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 4 retirado da solução: 3 2 
+
+Grupos restantes: 1 2 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 1 4 
+
+Cl substituído para: 0 1 4 
+
+Solucao: 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 2 retirado da solução: 3 
+
+Grupos restantes: 1 2 3 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 1 2 4 
+
+Cl substituído para: 0 1 2 4 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 2 3 6 
+
+Resultado da diferença: 2 3 6 
+
+Candidatos restantes: 0 1 2 4 
+
+Candidato inserido no conjunto da solução: 3 4 
+
+Candidatos restantes: 0 1 2 
+
+Grupos restantes: 2 3 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 4 5 1 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 3 4 0 
+
+Candidatos restantes: 1 2 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 4 5 1 2 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 3 4 0 1 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 3 4 0 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 3 4 0 2 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 0 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 3 4 0 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+Solucao: 3 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 3 4 
+
+Grupos restantes: 2 3 6 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 3 4 1 
+
+Candidatos restantes: 0 2 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 4 5 1 2 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 3 4 1 0 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 4 1 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 3 4 1 2 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 1 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 3 4 1 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+Solucao: 3 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 3 4 
+
+Grupos restantes: 2 3 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 3 4 2 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 4 5 1 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 3 4 2 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 3 4 2 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 3 4 2 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 4 5 
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 3 4 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 3 4 2 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 3 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 3 4 
+
+Grupos restantes: 2 3 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+Solucao: 3 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 4 retirado da solução: 3 
+
+Grupos restantes: 1 2 3 6 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 1 2 4 
+
+Cl substituído para: 0 1 2 4 
+
+Solucao: 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 0
+Candidato 3 retirado da solução: 
+
+Grupos restantes: 1 2 3 4 5 6 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 1 2 3 4 
+
+Cl substituído para: 0 1 2 3 4 
+
+
+Inicializando for com i = 4
+
+Grupo do candidato 4: 1 5 
+
+Remaining Groups: 1 2 3 4 5 6 
+
+Resultado da diferença: 2 3 4 6 
+
+Candidatos restantes: 0 1 2 3 4 
+
+Candidato inserido no conjunto da solução: 4 
+
+Candidatos restantes: 0 1 2 3 
+
+Grupos restantes: 2 3 4 6 
+
+Chamando Backtracking 1
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 1)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+
+
+Total dos Grupos cobertos: 1 5 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 2 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 3 4 6 
+
+Resultado da diferença: 4 6 
+
+Candidatos restantes: 0 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 0 
+
+Candidatos restantes: 1 2 3 
+
+Grupos restantes: 4 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 1 5 2 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 0 1 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 4 0 
+
+Grupos restantes: 4 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 0 2 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 1 5 2 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 4 0 2 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 0 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 0 2 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 4 0 2 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 0 2 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 4 0 2 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 4 0 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 4 0 
+
+Grupos restantes: 4 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 0 3 
+
+Candidatos restantes: 1 2 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 1 5 2 3 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 4 0 3 1 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 0 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 0 3 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 4 0 3 2 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 0 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 4 0 3 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+Solucao: 4 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 4 0 
+
+Grupos restantes: 4 6 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 2 3 
+
+Cl substituído para: 1 2 3 
+
+Solucao: 4 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 0 retirado da solução: 4 
+
+Grupos restantes: 2 3 4 6 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 2 3 
+
+Cl substituído para: 0 1 2 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 3 4 6 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 1 
+
+Candidatos restantes: 0 2 3 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 1 5 2 4 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 3 
+
+Candidato inserido no conjunto da solução: 4 1 0 
+
+Candidatos restantes: 2 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 4 1 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 3 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 3 
+
+Candidato inserido no conjunto da solução: 4 1 2 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 1 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 4 1 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 3 
+
+Cl substituído para: 0 2 
+
+Solucao: 4 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 1 retirado da solução: 4 
+
+Grupos restantes: 2 3 4 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 2 3 
+
+Cl substituído para: 0 1 2 3 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 2 3 4 6 
+
+Resultado da diferença: 2 4 
+
+Candidatos restantes: 0 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 2 
+
+Candidatos restantes: 0 1 3 
+
+Grupos restantes: 2 4 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 1 5 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 4 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 4 2 0 
+
+Candidatos restantes: 1 3 
+
+Grupos restantes: 4 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 1 5 3 6 2 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 3 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 3 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 4 2 0 1 
+
+Candidatos restantes: 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 2 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 2 0 
+
+Grupos restantes: 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 3 
+
+Candidato inserido no conjunto da solução: 4 2 0 3 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+Grupo inserido: 4 5 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 2 0 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 3 retirado da solução: 4 2 0 
+
+Grupos restantes: 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 1 3 
+
+Cl substituído para: 1 3 
+
+Solucao: 4 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 4 2 
+
+Grupos restantes: 2 4 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 4 2 1 
+
+Candidatos restantes: 0 3 
+
+Grupos restantes: 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 4 2 
+
+Grupos restantes: 2 4 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 2 4 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 3 
+
+Candidato inserido no conjunto da solução: 4 2 3 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 1 5 3 6 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 4 2 3 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 2 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 4 2 3 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 4 2 3 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 3 6 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 2 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 2 3 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 4 2 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 3 retirado da solução: 4 2 
+
+Grupos restantes: 2 4 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 1 3 
+
+Cl substituído para: 0 1 3 
+
+Solucao: 4 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 2 retirado da solução: 4 
+
+Grupos restantes: 2 3 4 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 1 2 3 
+
+Cl substituído para: 0 1 2 3 
+
+
+Inicializando for com i = 3
+
+Grupo do candidato 3: 4 5 
+
+Remaining Groups: 2 3 4 6 
+
+Resultado da diferença: 2 3 6 
+
+Candidatos restantes: 0 1 2 3 
+
+Candidato inserido no conjunto da solução: 4 3 
+
+Candidatos restantes: 0 1 2 
+
+Grupos restantes: 2 3 6 
+
+Chamando Backtracking 2
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 2)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+
+
+Total dos Grupos cobertos: 1 5 4 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 6 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 4 3 0 
+
+Candidatos restantes: 1 2 
+
+Grupos restantes: 6 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+
+
+Total dos Grupos cobertos: 1 5 4 2 3 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 1 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 1 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 4 3 0 1 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 0 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 3 0 
+
+Grupos restantes: 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 6 
+
+Resultado da diferença: 
+
+Candidatos restantes: 1 2 
+
+Candidato inserido no conjunto da solução: 4 3 0 2 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 1 2 3 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 0 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 4 3 0 
+
+Grupos restantes: 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 1 2 
+
+Cl substituído para: 1 2 
+
+Solucao: 4 3 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 0 retirado da solução: 4 3 
+
+Grupos restantes: 2 3 6 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 3 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 4 3 1 
+
+Candidatos restantes: 0 2 
+
+Grupos restantes: 3 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+
+
+Total dos Grupos cobertos: 1 5 4 2 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 2 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 2 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 4 3 1 0 
+
+Candidatos restantes: 2 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 1 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 4 3 1 
+
+Grupos restantes: 3 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 3 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 2 
+
+Candidato inserido no conjunto da solução: 4 3 1 2 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 2 4 6 
+Grupo inserido: 3 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 1 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 2 retirado da solução: 4 3 1 
+
+Grupos restantes: 3 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 2 
+
+Cl substituído para: 0 2 
+
+Solucao: 4 3 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 1 retirado da solução: 4 3 
+
+Grupos restantes: 2 3 6 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+
+Inicializando for com i = 2
+
+Grupo do candidato 2: 3 6 
+
+Remaining Groups: 2 3 6 
+
+Resultado da diferença: 2 
+
+Candidatos restantes: 0 1 2 
+
+Candidato inserido no conjunto da solução: 4 3 2 
+
+Candidatos restantes: 0 1 
+
+Grupos restantes: 2 
+
+Chamando Backtracking 3
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 3)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+
+
+Total dos Grupos cobertos: 1 5 4 3 6 
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+Candidato 0 inserido no conjunto de Cl!
+Candidato 1 inserido no conjunto de Cl!
+
+=====================================
+Cl: 0 1 
+
+
+Inicializando for com i = 0
+
+Grupo do candidato 0: 1 2 3 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 4 3 2 0 
+
+Candidatos restantes: 1 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 1 2 3 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 2 0 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 0 retirado da solução: 4 3 2 
+
+Grupos restantes: 2 
+
+Candidato 0 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+
+Inicializando for com i = 1
+
+Grupo do candidato 1: 2 4 6 
+
+Remaining Groups: 2 
+
+Resultado da diferença: 
+
+Candidatos restantes: 0 1 
+
+Candidato inserido no conjunto da solução: 4 3 2 1 
+
+Candidatos restantes: 0 
+
+Grupos restantes: 
+
+Chamando Backtracking 4
+
+=====================================
+
+=====================================
+
+Função BackTracking (Nivel: 4)
+
+
+=====================================
+
+Função: Todos Grupos Cobertos!
+
+
+Grupo inserido: 1 5 
+Grupo inserido: 4 5 
+Grupo inserido: 3 6 
+Grupo inserido: 2 4 6 
+
+
+Todos os grupos cobertos
+
+=====================================
+
+=====================================
+
+Função clCalcule: Calculando CL
+
+
+=====================================
+Cl: 
+
+Solucao: 4 3 2 1 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 3
+Candidato 1 retirado da solução: 4 3 2 
+
+Grupos restantes: 2 
+
+Candidato 1 inserido no conjunto de candidatos restantes: 0 1 
+
+Cl substituído para: 0 1 
+
+Solucao: 4 3 2 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 2
+Candidato 2 retirado da solução: 4 3 
+
+Grupos restantes: 2 3 6 
+
+Candidato 2 inserido no conjunto de candidatos restantes: 0 1 2 
+
+Cl substituído para: 0 1 2 
+
+Solucao: 4 3 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 1
+Candidato 3 retirado da solução: 4 
+
+Grupos restantes: 2 3 4 6 
+
+Candidato 3 inserido no conjunto de candidatos restantes: 0 1 2 3 
+
+Cl substituído para: 0 1 2 3 
+
+Solucao: 4 
+
+Saiu fora!
+
+=====================================
+Voltou para o Backtracking 0
+Candidato 4 retirado da solução: 
+
+Grupos restantes: 1 2 3 4 5 6 
+
+Candidato 4 inserido no conjunto de candidatos restantes: 0 1 2 3 4 
+
+Cl substituído para: 0 1 2 3 4 
+
+Solucao: 
+
+Saiu fora!
+
+Solução ótima: 1 4 2 
+Tempo de CPU usado no BackTracking: 0.001046 segundos
 
 =====================================

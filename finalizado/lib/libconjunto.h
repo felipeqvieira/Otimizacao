@@ -129,3 +129,7 @@ conjunto_t *cria_uniao_ordenado(conjunto_t *c1, conjunto_t *c2);
 int insere_conjunto_ordenado(conjunto_t *c, int elemento);
 
 void compara_e_retira(conjunto_t *c1, conjunto_t *c2);
+
+int retira_conjunto_sem_ordenacao(conjunto_t *c, int elemento);
+
+int pertence_sem_ordenacao(conjunto_t *c, int elemento);

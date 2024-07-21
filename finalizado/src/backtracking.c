@@ -12,9 +12,6 @@ int todosGruposCobertos(conjunto_t *solution){
     return 0;
   }
 
-  printf("Solution: ");
-  imprime(solution);
-
   printf("\n");
 
   conjunto_t *cobertos = cria_conjunto(qtdGroups);
@@ -40,44 +37,24 @@ int todosGruposCobertos(conjunto_t *solution){
 
 }
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options){
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options, conjunto_t **cl_storage){
   
   printf("\n=====================================\n");
 
-  printf("\nFunção BackTracking\n\n");
+  printf("\nFunção BackTracking (Nivel: %d)\n\n", currentLevel);
 
   if(todosGruposCobertos(result->solution)){
 
     if(result->solution->card < result->definitiveSolution->card){
       destroi_conjunto(result->definitiveSolution);
       result->definitiveSolution = cria_copia(result->solution);
+
+      printf("Solução definitiva atualizada: ");
+      imprime(result->definitiveSolution);
+
+      printf("\n");
     }
 
-    retira_conjunto(result->solution, result->solution->v[result->solution->card-1]);
-
-    destroi_conjunto(remaining->remainingGroups);
-    remaining->remainingGroups = cria_conjunto(qtdGroups);
-
-    for(int i = 0; i < qtdGroups; i++){
-      insere_conjunto(remaining->remainingGroups, i+1);
-    }
-
-    for(int i = 0; i < result->solution->card; i++){
-      remaining->remainingGroups = cria_diferenca(remaining->remainingGroups, candidates[result->solution->v[i]].groups);
-    }
-
-    printf("Solução com o ultimo retirado: ");
-    imprime(result->solution);
-
-    printf("Grupos restantes: ");
-    imprime(remaining->remainingGroups);
-
-    printf("Definitive Solution: ");
-    imprime(result->definitiveSolution);
-    
-    currentLevel++;
-
-    //return ;
   }
 
   improvements->cl = clCalcule(remaining, result);
@@ -92,52 +69,120 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     }
   }
 
+  cl_storage[currentLevel] = cria_copia(improvements->cl);
+
   printf("Cl: ");
   imprime(improvements->cl);
 
   printf("\n");
 
-  for (int i = currentLevel; i < improvements->cl->card; i++) {
+  for (int i = 0; i < improvements->cl->card; i++) {
     
-        int candidate = improvements->cl->v[i];
-        int cardinal = remaining->remainingGroups->card;
+    int candidate = improvements->cl->v[i];
+    int cardinal = remaining->remainingGroups->card;
 
-        printf("\nInicializando for com i = %d\n\n", i);
+    printf("\nInicializando for com i = %d\n\n", i);
+
+    printf("Grupo do candidato %d: ", candidate);
+    imprime(candidates[candidate].groups);
+
+    printf("\n");
+
+    printf("Remaining Groups: ");
+    imprime(remaining->remainingGroups);
+
+    printf("\n");
         
-        //talvez criar uma função para isso
-        remaining->remainingGroups = cria_diferenca(remaining->remainingGroups, candidates[candidate].groups);
+    //talvez criar uma função para isso
+    remaining->remainingGroups = cria_diferenca(remaining->remainingGroups, candidates[candidate].groups);
 
-        printf("Remaining Groups: ");
-        imprime(remaining->remainingGroups);
+    printf("Resultado da diferença: ");
+    imprime(remaining->remainingGroups);
 
-        if (cardinal == remaining->remainingGroups->card){
-            continue;
-        }
+    printf("\n");
+    
 
-        if (!boundCalcule(improvements->cl, result, remaining)) {
-            printf("Saiu pelo Bound!\n");
-            continue;
-        }
-
-        insere_conjunto(result->solution, candidate);
-        printf("Solution: ");
-        imprime(result->solution);
-        printf("\n");
-
-        retira_conjunto(remaining->remainingCandidates, candidate);
-        printf("Remaining Candidates: ");
-        imprime(remaining->remainingCandidates);
-        printf("\n");
-
-        printf("Remaining Groups: ");
-        imprime(remaining->remainingGroups);
-
-        printf("Chamando backtracking i = %d\n", i);
-
-        backTracking(i, result, remaining, improvements, options);
-
-        insere_conjunto(remaining->remainingCandidates, candidate);
+    if (cardinal == remaining->remainingGroups->card){
+      continue;
     }
+
+    //if (!boundCalcule(improvements->cl, result, remaining)) {
+        //printf("Saiu pelo Bound!\n");
+       // continue;
+    //}
+
+    printf("Candidatos restantes: ");
+    imprime(remaining->remainingCandidates);
+    printf("\n");
+
+    insere_conjunto(result->solution, candidate);
+    printf("Candidato inserido no conjunto da solução: ");
+    imprime(result->solution);
+    printf("\n");
+
+    retira_conjunto(remaining->remainingCandidates, candidate);
+
+    printf("Candidatos restantes: ");
+    imprime(remaining->remainingCandidates);
+    printf("\n");
+
+    printf("Grupos restantes: ");
+    imprime(remaining->remainingGroups);
+
+    printf("\n");
+
+    printf("Chamando Backtracking %d\n", currentLevel+1);
+
+    printf("\n=====================================\n");
+
+    backTracking(currentLevel+1, result, remaining, improvements, options, cl_storage);
+
+    printf("\n=====================================\n");
+
+    printf("Voltou para o Backtracking %d\n", currentLevel);
+
+    retira_conjunto_sem_ordenacao(result->solution, candidate);
+
+    printf("Candidato %d retirado da solução: ", candidate);
+    imprime(result->solution);
+
+    printf("\n");
+
+    destroi_conjunto(remaining->remainingGroups);
+        remaining->remainingGroups = cria_conjunto(qtdGroups);
+
+    for(int i = 0; i < qtdGroups; i++){
+      insere_conjunto(remaining->remainingGroups, i+1);
+    }
+
+    for(int i = 0; i < result->solution->card; i++){
+      remaining->remainingGroups = cria_diferenca(remaining->remainingGroups, candidates[result->solution->v[i]].groups);
+    } 
+
+    printf("Grupos restantes: ");
+    imprime(remaining->remainingGroups);
+
+    printf("\n");
+
+    insere_conjunto_ordenado(remaining->remainingCandidates, candidate);
+
+    printf("Candidato %d inserido no conjunto de candidatos restantes: ", candidate);
+    imprime(remaining->remainingCandidates); 
+
+    printf("\n"); 
+
+    improvements->cl = cria_copia(cl_storage[currentLevel]);
+
+    printf("Cl substituído para: ");
+    imprime(improvements->cl);
+
+    printf("\n");
+  }
+
+    printf("Solucao: ");
+    imprime(result->solution);
+
+    printf("\n");
 
     printf("Saiu fora!\n");
     return;

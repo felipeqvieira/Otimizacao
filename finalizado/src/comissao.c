@@ -3,6 +3,8 @@
 Candidate *candidates;
 conjunto_t *groupCovered;
 
+conjunto_t **cl_storage;
+
 int qtdGroups, qtdCandidates;
 
 int main(int argc, char *argv[]){
@@ -101,14 +103,20 @@ int main(int argc, char *argv[]){
   }
   
   for(int i = 0; i < qtdCandidates; i++){
-    insere_conjunto(remaining->remainingCandidates, i);
+    insere_conjunto_ordenado(remaining->remainingCandidates, i);
   }
 
+  cl_storage = (conjunto_t **)alocar_memoria(qtdCandidates, sizeof(conjunto_t *));
+
   start = clock();
-  backTracking(0, result, remaining, improvements, &options);
+  backTracking(0, result, remaining, improvements, &options, cl_storage);
   end = clock();
 
   cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
+  printf("\n");
+
+  printf("Solução ótima: ");
 
   imprime_solucao(result->definitiveSolution, candidates);
 

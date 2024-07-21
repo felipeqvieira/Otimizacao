@@ -35,10 +35,11 @@ typedef struct{
 
 extern int qtdGroups, qtdCandidates;
 extern Candidate *candidates;
+extern conjunto_t **cl_storage;
 
 int todosGruposCobertos(conjunto_t *solution);
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options);
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options, conjunto_t **cl_storage);
 
 conjunto_t* clCalcule(Remaining *remaining, Result *result);
 

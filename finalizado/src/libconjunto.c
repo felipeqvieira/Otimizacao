@@ -81,7 +81,7 @@ int insere_conjunto(conjunto_t *c, int elemento){
 
   int i = 0;
 
-  if (pertence(c,elemento) > -1)
+  if (pertence_sem_ordenacao(c,elemento) > -1)
     return 0;
   
 
@@ -119,6 +119,23 @@ int insere_conjunto(conjunto_t *c, int elemento){
 int retira_conjunto (conjunto_t *c, int elemento){
   
   int pos = pertence(c, elemento);
+  
+  if (pos > -1){
+  
+    for (int i = pos; i < c->card - 1; i++)
+      c->v[i] = c->v[i+1];
+  
+    c->card--;
+  
+    return elemento;
+  }
+  
+    return -1;
+}
+
+int retira_conjunto_sem_ordenacao(conjunto_t *c, int elemento){
+  
+  int pos = pertence_sem_ordenacao(c, elemento);
   
   if (pos > -1){
   
@@ -388,4 +405,20 @@ void compara_e_retira(conjunto_t *c1, conjunto_t *c2){
     }
   
     return ;
+}
+
+int pertence_sem_ordenacao(conjunto_t *c, int elemento){
+
+  if(conjunto_vazio(c))
+    return -2;
+  else{
+
+    for(int i = 0; i < c->card; i++){
+      if(c->v[i] == elemento){
+        return i;
+      }
+    }
+    return -1;
+  }
+
 }
