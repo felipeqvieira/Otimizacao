@@ -2,44 +2,91 @@
 
 int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining){
 
-  printf("\n=====================================\n");
+  //printf("\n=====================================\n");
   
-  printf("\nFunção boundCalcule\n\n");
+  //printf("\nFunção boundCalcule\n\n");
 
-  if(cl->card == 0)
-    return 0;
-
+  // pega a quantidade de grupos restantes
   int lastGroups = remaining->remainingGroups->card;
 
-  printf("Cl->card: %d\n\n", cl->card);
+  //printf("Cl->card: %d\n\n", cl->card);
 
-  printf("Quantidade de grupos restantes: %d\n", lastGroups);
+  //printf("Quantidade de grupos restantes: %d\n", lastGroups);
 
-  int mediaGruposPorCandidato = 0;
+  float mediaGruposPorCandidato = 0;
 
+  //quantidade total de grupos de todos os candidatos
   for(int i = 0; i < cl->card; i++){
     mediaGruposPorCandidato += candidates[cl->v[i]].numGroups;
   }
 
-  printf("Quantidade Total de Grupo de todos os candidatos: %d\n", mediaGruposPorCandidato);
+  //printf("Quantidade Total de Grupo de todos os candidatos: %f\n", mediaGruposPorCandidato);
 
-  mediaGruposPorCandidato  = ceil(mediaGruposPorCandidato/cl->card);
+  //calcula a média de grupo por candidato cl
+  mediaGruposPorCandidato  = (mediaGruposPorCandidato/cl->card);
 
-  printf("Média de grupos por candidato: %d\n", mediaGruposPorCandidato);
+  mediaGruposPorCandidato = ceil(mediaGruposPorCandidato);
 
-  int minimoCandidatosNecessarios = ceil(lastGroups / mediaGruposPorCandidato);
+  //printf("Média de grupos por candidato: %f\n", mediaGruposPorCandidato);
 
-  printf("Mínimo de candidatos necessários: %d\n", minimoCandidatosNecessarios);
+  //todos os grupos restantes para a solução dividido pela média de grupo por candidato
+  float minimoCandidatosNecessarios = (lastGroups / mediaGruposPorCandidato);
 
-  if(minimoCandidatosNecessarios + result->solution->card > result->definitiveSolution->card){
-    printf("Função retornou 0\n");
-    printf("\n=====================================\n");
+  minimoCandidatosNecessarios = ceil(minimoCandidatosNecessarios);
+
+  //printf("Mínimo de candidatos necessários: %f\n", minimoCandidatosNecessarios);
+
+  //printf("Minimo de candidatos necessarios + tamanho da solução atual = %f\n", minimoCandidatosNecessarios + result->solution->card);
+
+  //printf("Tamanho da solução definitiva: %d\n", result->definitiveSolution->card);
+
+  if(minimoCandidatosNecessarios + result->solution->card >= result->definitiveSolution->card){
+    //printf("Função retornou 0\n");
+    //printf("\n=====================================\n");
     return 0;
   } else{
-    printf("Função retornou 1\n");
-    printf("\n=====================================\n");
+    //printf("Função retornou 1\n");
+    //printf("\n=====================================\n");
     return 1;
   }
 
 
+}
+
+int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining)
+{
+
+  //printf("\n=====================================\n");
+
+  //printf("\nFunção boundCalcule2\n\n");
+  
+  /* 
+    B(E,F) = Número de candidatos escolhidos + 
+    (Nº grupos não cobertos / número máximo de grupos que um candidato restante cobre)
+  */
+  
+  if (remaining->remainingCandidates->card == 0) return 0;
+
+  float num_remaining_groups = remaining->remainingGroups->card;
+
+  //printf("Número de grupos restantes: %f\n", num_remaining_groups);
+
+  /* Número máximo de grupos que um candidato restante cobre */
+  float max_groups_per_candidate = 0;
+
+  for (int i = 0; i < cl->card; i++)
+  {
+    if(candidates[cl->v[i]].numGroups > max_groups_per_candidate)
+      max_groups_per_candidate = candidates[cl->v[i]].numGroups;
+  }
+
+  //printf("Número máximo de grupos que um candidato restante cobre: %f\n", max_groups_per_candidate);
+  
+  /* B(E,F) =  |E| + MinCandidates */
+  int minCandidates = result->solution->card + ceil(num_remaining_groups / max_groups_per_candidate);
+
+  //printf("Número mínimo de candidatos necessários para preencher uma resposta: %d\n", minCandidates);
+
+  //retorna 0 se o bound não for promissor
+  return minCandidates;
 }

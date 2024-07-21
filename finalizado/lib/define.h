@@ -56,3 +56,5 @@ void sortCandidatesByGroup(Candidate *candidate);
 void imprime_solucao(conjunto_t *c, Candidate *candidates);
 
 int isCovered(int *groupCovered, int valor);
+
+int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining);
