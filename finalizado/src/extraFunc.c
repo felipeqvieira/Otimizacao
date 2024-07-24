@@ -52,3 +52,8 @@ void imprime_solucao(conjunto_t *c, Candidate *candidates){
 
   printf("\n");
 }
+
+void print_report(double cpu_time_used) {
+  fprintf(stderr, "Número de nós visitados: %d\n", node_count);
+  fprintf(stderr, "Tempo de execução (excluindo I/O): %.6f segundos\n", cpu_time_used);
+}

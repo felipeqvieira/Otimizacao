@@ -1,5 +1,7 @@
 #include "../lib/define.h"
 
+int node_count = 0;
+
 int todosGruposCobertos(conjunto_t *solution){
 
   //printf("\n=====================================\n");
@@ -94,6 +96,8 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
         continue;
       }
     }
+
+    node_count++;
     
     int candidate = improvements->cl->v[i];
     int cardinal = remaining->remainingGroups->card;

@@ -33,7 +33,7 @@ typedef struct{
   bool boundProf;
 }Options;
 
-extern int qtdGroups, qtdCandidates;
+extern int qtdGroups, qtdCandidates, node_count;
 extern Candidate *candidates;
 extern conjunto_t **cl_storage;
 
@@ -58,3 +58,5 @@ void imprime_solucao(conjunto_t *c, Candidate *candidates);
 int isCovered(int *groupCovered, int valor);
 
 int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining);
+
+void print_report(double cpu_time_used);

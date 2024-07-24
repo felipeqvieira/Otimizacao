@@ -2,7 +2,7 @@
 
 //Bdada(E,F) é o tamanho de E mais 1 (um) caso existam grupos ainda não atendidos
 
-void profBound(Remaining *remaining, Result *result){
+int profBound(Remaining *remaining, Result *result){
 
   int resposta = 0;
 

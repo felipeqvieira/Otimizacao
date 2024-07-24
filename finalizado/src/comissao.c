@@ -121,7 +121,7 @@ int main(int argc, char *argv[]){
 
   imprime_solucao(result->definitiveSolution, candidates);
 
-  printf("Tempo de CPU usado no BackTracking: %f segundos\n", cpu_time_used);
+  print_report(cpu_time_used);
 
   printf("\n=====================================\n");
 
