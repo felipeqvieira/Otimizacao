@@ -4,161 +4,1450 @@
 Função Main
 
 Options:
-  Prune Optimality: ON
-  Prune Feasibility: ON
+  Prune Optimality: OFF
+  Prune Feasibility: OFF
   Bound Prof: OFF
-Solucao: 
+Solução encontrada!
+0 1 3 4 6 
+Solução encontrada!
+0 1 3 4 6 18 
+Solução encontrada!
+0 1 3 4 7 12 
+Solução encontrada!
+0 1 3 4 7 12 18 
+Solução encontrada!
+0 1 3 4 7 14 
+Solução encontrada!
+0 1 3 4 7 14 18 
+Solução encontrada!
+0 1 3 4 12 14 
+Solução encontrada!
+0 1 3 4 12 14 18 
+Solução encontrada!
+0 1 3 4 14 
+Solução encontrada!
+0 1 3 4 14 18 
+Solução encontrada!
+0 1 3 6 7 
+Solução encontrada!
+0 1 3 6 7 18 
+Solução encontrada!
+0 1 3 6 11 
+Solução encontrada!
+0 1 3 6 11 18 
+Solução encontrada!
+0 1 3 7 12 
+Solução encontrada!
+0 1 3 7 12 18 
+Solução encontrada!
+0 1 3 7 14 
+Solução encontrada!
+0 1 3 7 14 18 
+Solução encontrada!
+0 1 3 11 12 14 
+Solução encontrada!
+0 1 3 11 12 14 18 
+Solução encontrada!
+0 1 3 11 14 
+Solução encontrada!
+0 1 3 11 14 18 
+Solução encontrada!
+0 1 4 6 
+Solução encontrada!
+0 1 4 6 18 
+Solução encontrada!
+0 1 4 7 12 
+Solução encontrada!
+0 1 4 7 12 18 
+Solução encontrada!
+0 1 4 12 14 
+Solução encontrada!
+0 1 4 12 14 18 
+Solução encontrada!
+0 1 6 7 
+Solução encontrada!
+0 1 6 7 18 
+Solução encontrada!
+0 1 6 11 
+Solução encontrada!
+0 1 6 11 18 
+Solução encontrada!
+0 1 7 12 
+Solução encontrada!
+0 1 7 12 18 
+Solução encontrada!
+0 1 11 12 14 
+Solução encontrada!
+0 1 11 12 14 18 
+Solução encontrada!
+0 2 3 4 6 18 
+Solução encontrada!
+0 2 3 4 7 12 18 
+Solução encontrada!
+0 2 3 4 7 14 18 
+Solução encontrada!
+0 2 3 4 12 14 18 
+Solução encontrada!
+0 2 3 4 14 18 
+Solução encontrada!
+0 2 3 6 7 18 
+Solução encontrada!
+0 2 3 6 11 18 
+Solução encontrada!
+0 2 3 7 12 18 
+Solução encontrada!
+0 2 3 7 14 18 
+Solução encontrada!
+0 2 3 11 12 14 18 
+Solução encontrada!
+0 2 3 11 14 18 
+Solução encontrada!
+0 2 4 6 18 
+Solução encontrada!
+0 2 4 7 12 18 
+Solução encontrada!
+0 2 4 12 14 18 
+Solução encontrada!
+0 2 6 7 18 
+Solução encontrada!
+0 2 6 11 18 
+Solução encontrada!
+0 2 7 12 18 
+Solução encontrada!
+0 2 11 12 14 18 
+Solução encontrada!
+0 3 4 5 6 10 
+Solução encontrada!
+0 3 4 5 6 10 18 
+Solução encontrada!
+0 3 4 5 6 17 
+Solução encontrada!
+0 3 4 5 6 17 18 
+Solução encontrada!
+0 3 4 5 7 10 12 
+Solução encontrada!
+0 3 4 5 7 10 12 18 
+Solução encontrada!
+0 3 4 5 7 10 14 
+Solução encontrada!
+0 3 4 5 7 10 14 18 
+Solução encontrada!
+0 3 4 5 7 12 17 
+Solução encontrada!
+0 3 4 5 7 12 17 18 
+Solução encontrada!
+0 3 4 5 7 14 17 
+Solução encontrada!
+0 3 4 5 7 14 17 18 
+Solução encontrada!
+0 3 4 5 10 12 14 
+Solução encontrada!
+0 3 4 5 10 12 14 18 
+Solução encontrada!
+0 3 4 5 10 14 
+Solução encontrada!
+0 3 4 5 10 14 18 
+Solução encontrada!
+0 3 4 5 12 14 17 
+Solução encontrada!
+0 3 4 5 12 14 17 18 
+Solução encontrada!
+0 3 4 5 14 17 
+Solução encontrada!
+0 3 4 5 14 17 18 
+Solução encontrada!
+0 3 4 6 10 18 
+Solução encontrada!
+0 3 4 7 10 12 18 
+Solução encontrada!
+0 3 4 7 10 14 18 
+Solução encontrada!
+0 3 4 10 12 14 18 
+Solução encontrada!
+0 3 4 10 14 18 
+Solução encontrada!
+0 3 5 6 7 10 13 17 
+Solução encontrada!
+0 3 5 6 7 10 13 17 18 
+Solução encontrada!
+0 3 5 6 7 13 17 
+Solução encontrada!
+0 3 5 6 7 13 17 18 
+Solução encontrada!
+0 3 5 6 10 11 13 17 
+Solução encontrada!
+0 3 5 6 10 11 13 17 18 
+Solução encontrada!
+0 3 5 6 11 13 17 
+Solução encontrada!
+0 3 5 6 11 13 17 18 
+Solução encontrada!
+0 3 5 7 10 12 13 17 
+Solução encontrada!
+0 3 5 7 10 12 13 17 18 
+Solução encontrada!
+0 3 5 7 10 13 14 17 
+Solução encontrada!
+0 3 5 7 10 13 14 17 18 
+Solução encontrada!
+0 3 5 7 12 13 17 
+Solução encontrada!
+0 3 5 7 12 13 17 18 
+Solução encontrada!
+0 3 5 7 13 14 17 
+Solução encontrada!
+0 3 5 7 13 14 17 18 
+Solução encontrada!
+0 3 5 10 11 12 13 14 17 
+Solução encontrada!
+0 3 5 10 11 12 13 14 17 18 
+Solução encontrada!
+0 3 5 10 11 13 14 17 
+Solução encontrada!
+0 3 5 10 11 13 14 17 18 
+Solução encontrada!
+0 3 5 11 12 13 14 17 
+Solução encontrada!
+0 3 5 11 12 13 14 17 18 
+Solução encontrada!
+0 3 5 11 13 14 17 
+Solução encontrada!
+0 3 5 11 13 14 17 18 
+Solução encontrada!
+0 3 6 7 10 13 17 18 
+Solução encontrada!
+0 3 6 10 11 13 17 18 
+Solução encontrada!
+0 3 7 10 12 13 17 18 
+Solução encontrada!
+0 3 7 10 13 14 17 18 
+Solução encontrada!
+0 3 10 11 12 13 14 17 18 
+Solução encontrada!
+0 3 10 11 13 14 17 18 
+Solução encontrada!
+0 4 5 6 10 
+Solução encontrada!
+0 4 5 6 10 18 
+Solução encontrada!
+0 4 5 6 17 
+Solução encontrada!
+0 4 5 6 17 18 
+Solução encontrada!
+0 4 5 7 10 12 
+Solução encontrada!
+0 4 5 7 10 12 18 
+Solução encontrada!
+0 4 5 7 12 17 
+Solução encontrada!
+0 4 5 7 12 17 18 
+Solução encontrada!
+0 4 5 10 12 14 
+Solução encontrada!
+0 4 5 10 12 14 18 
+Solução encontrada!
+0 4 5 12 14 17 
+Solução encontrada!
+0 4 5 12 14 17 18 
+Solução encontrada!
+0 4 6 10 18 
+Solução encontrada!
+0 4 7 10 12 18 
+Solução encontrada!
+0 4 10 12 14 18 
+Solução encontrada!
+0 5 6 7 10 13 17 
+Solução encontrada!
+0 5 6 7 10 13 17 18 
+Solução encontrada!
+0 5 6 7 13 17 
+Solução encontrada!
+0 5 6 7 13 17 18 
+Solução encontrada!
+0 5 6 10 11 13 17 
+Solução encontrada!
+0 5 6 10 11 13 17 18 
+Solução encontrada!
+0 5 6 11 13 17 
+Solução encontrada!
+0 5 6 11 13 17 18 
+Solução encontrada!
+0 5 7 10 12 13 17 
+Solução encontrada!
+0 5 7 10 12 13 17 18 
+Solução encontrada!
+0 5 7 12 13 17 
+Solução encontrada!
+0 5 7 12 13 17 18 
+Solução encontrada!
+0 5 10 11 12 13 14 17 
+Solução encontrada!
+0 5 10 11 12 13 14 17 18 
+Solução encontrada!
+0 5 11 12 13 14 17 
+Solução encontrada!
+0 5 11 12 13 14 17 18 
+Solução encontrada!
+0 6 7 10 13 17 18 
+Solução encontrada!
+0 6 10 11 13 17 18 
+Solução encontrada!
+0 7 10 12 13 17 18 
+Solução encontrada!
+0 10 11 12 13 14 17 18 
+Solução encontrada!
+1 3 4 6 8 15 16 
+Solução encontrada!
+1 3 4 6 8 15 16 18 
+Solução encontrada!
+1 3 4 6 8 16 
+Solução encontrada!
+1 3 4 6 8 16 18 
+Solução encontrada!
+1 3 4 6 9 15 16 
+Solução encontrada!
+1 3 4 6 9 15 16 18 
+Solução encontrada!
+1 3 4 7 8 12 15 16 
+Solução encontrada!
+1 3 4 7 8 12 15 16 18 
+Solução encontrada!
+1 3 4 7 8 12 16 
+Solução encontrada!
+1 3 4 7 8 12 16 18 
+Solução encontrada!
+1 3 4 7 8 14 15 16 
+Solução encontrada!
+1 3 4 7 8 14 15 16 18 
+Solução encontrada!
+1 3 4 7 8 14 16 
+Solução encontrada!
+1 3 4 7 8 14 16 18 
+Solução encontrada!
+1 3 4 7 9 12 15 16 
+Solução encontrada!
+1 3 4 7 9 12 15 16 18 
+Solução encontrada!
+1 3 4 7 9 14 15 16 
+Solução encontrada!
+1 3 4 7 9 14 15 16 18 
+Solução encontrada!
+1 3 4 8 12 14 15 16 
+Solução encontrada!
+1 3 4 8 12 14 15 16 18 
+Solução encontrada!
+1 3 4 8 12 14 16 
+Solução encontrada!
+1 3 4 8 12 14 16 18 
+Solução encontrada!
+1 3 4 8 14 15 16 
+Solução encontrada!
+1 3 4 8 14 15 16 18 
+Solução encontrada!
+1 3 4 8 14 16 
+Solução encontrada!
+1 3 4 8 14 16 18 
+Solução encontrada!
+1 3 4 9 12 14 15 16 
+Solução encontrada!
+1 3 4 9 12 14 15 16 18 
+Solução encontrada!
+1 3 4 9 14 15 16 
+Solução encontrada!
+1 3 4 9 14 15 16 18 
+Solução encontrada!
+1 3 6 7 8 15 16 
+Solução encontrada!
+1 3 6 7 8 15 16 18 
+Solução encontrada!
+1 3 6 7 8 16 
+Solução encontrada!
+1 3 6 7 8 16 18 
+Solução encontrada!
+1 3 6 7 9 15 16 
+Solução encontrada!
+1 3 6 7 9 15 16 18 
+Solução encontrada!
+1 3 6 8 11 15 16 
+Solução encontrada!
+1 3 6 8 11 15 16 18 
+Solução encontrada!
+1 3 6 8 11 16 
+Solução encontrada!
+1 3 6 8 11 16 18 
+Solução encontrada!
+1 3 6 9 11 15 16 
+Solução encontrada!
+1 3 6 9 11 15 16 18 
+Solução encontrada!
+1 3 7 8 12 15 16 
+Solução encontrada!
+1 3 7 8 12 15 16 18 
+Solução encontrada!
+1 3 7 8 12 16 
+Solução encontrada!
+1 3 7 8 12 16 18 
+Solução encontrada!
+1 3 7 8 14 15 16 
+Solução encontrada!
+1 3 7 8 14 15 16 18 
+Solução encontrada!
+1 3 7 8 14 16 
+Solução encontrada!
+1 3 7 8 14 16 18 
+Solução encontrada!
+1 3 7 9 12 15 16 
+Solução encontrada!
+1 3 7 9 12 15 16 18 
+Solução encontrada!
+1 3 7 9 14 15 16 
+Solução encontrada!
+1 3 7 9 14 15 16 18 
+Solução encontrada!
+1 3 8 11 12 14 15 16 
+Solução encontrada!
+1 3 8 11 12 14 15 16 18 
+Solução encontrada!
+1 3 8 11 12 14 16 
+Solução encontrada!
+1 3 8 11 12 14 16 18 
+Solução encontrada!
+1 3 8 11 14 15 16 
+Solução encontrada!
+1 3 8 11 14 15 16 18 
+Solução encontrada!
+1 3 8 11 14 16 
+Solução encontrada!
+1 3 8 11 14 16 18 
+Solução encontrada!
+1 3 9 11 12 14 15 16 
+Solução encontrada!
+1 3 9 11 12 14 15 16 18 
+Solução encontrada!
+1 3 9 11 14 15 16 
+Solução encontrada!
+1 3 9 11 14 15 16 18 
+Solução encontrada!
+1 4 6 8 9 15 16 18 19 
+Solução encontrada!
+1 4 6 8 9 15 16 19 
+Solução encontrada!
+1 4 6 8 9 16 18 19 
+Solução encontrada!
+1 4 6 8 9 16 19 
+Solução encontrada!
+1 4 6 9 15 16 18 19 
+Solução encontrada!
+1 4 6 9 15 16 19 
+Solução encontrada!
+1 4 7 8 9 12 15 16 18 19 
+Solução encontrada!
+1 4 7 8 9 12 15 16 19 
+Solução encontrada!
+1 4 7 8 9 12 16 18 19 
+Solução encontrada!
+1 4 7 8 9 12 16 19 
+Solução encontrada!
+1 4 7 9 12 15 16 18 19 
+Solução encontrada!
+1 4 7 9 12 15 16 19 
+Solução encontrada!
+1 4 8 9 12 14 15 16 18 19 
+Solução encontrada!
+1 4 8 9 12 14 15 16 19 
+Solução encontrada!
+1 4 8 9 12 14 16 18 19 
+Solução encontrada!
+1 4 8 9 12 14 16 19 
+Solução encontrada!
+1 4 9 12 14 15 16 18 19 
+Solução encontrada!
+1 4 9 12 14 15 16 19 
+Solução encontrada!
+1 6 7 8 9 15 16 18 19 
+Solução encontrada!
+1 6 7 8 9 15 16 19 
+Solução encontrada!
+1 6 7 8 9 16 18 19 
+Solução encontrada!
+1 6 7 8 9 16 19 
+Solução encontrada!
+1 6 7 9 15 16 18 19 
+Solução encontrada!
+1 6 7 9 15 16 19 
+Solução encontrada!
+1 6 8 9 11 15 16 18 19 
+Solução encontrada!
+1 6 8 9 11 15 16 19 
+Solução encontrada!
+1 6 8 9 11 16 18 19 
+Solução encontrada!
+1 6 8 9 11 16 19 
+Solução encontrada!
+1 6 9 11 15 16 18 19 
+Solução encontrada!
+1 6 9 11 15 16 19 
+Solução encontrada!
+1 7 8 9 12 15 16 18 19 
+Solução encontrada!
+1 7 8 9 12 15 16 19 
+Solução encontrada!
+1 7 8 9 12 16 18 19 
+Solução encontrada!
+1 7 8 9 12 16 19 
+Solução encontrada!
+1 7 9 12 15 16 18 19 
+Solução encontrada!
+1 7 9 12 15 16 19 
+Solução encontrada!
+1 8 9 11 12 14 15 16 18 19 
+Solução encontrada!
+1 8 9 11 12 14 15 16 19 
+Solução encontrada!
+1 8 9 11 12 14 16 18 19 
+Solução encontrada!
+1 8 9 11 12 14 16 19 
+Solução encontrada!
+1 9 11 12 14 15 16 18 19 
+Solução encontrada!
+1 9 11 12 14 15 16 19 
+Solução encontrada!
+2 3 4 6 8 15 16 18 
+Solução encontrada!
+2 3 4 6 8 16 18 
+Solução encontrada!
+2 3 4 6 9 15 16 18 
+Solução encontrada!
+2 3 4 7 8 12 15 16 18 
+Solução encontrada!
+2 3 4 7 8 12 16 18 
+Solução encontrada!
+2 3 4 7 8 14 15 16 18 
+Solução encontrada!
+2 3 4 7 8 14 16 18 
+Solução encontrada!
+2 3 4 7 9 12 15 16 18 
+Solução encontrada!
+2 3 4 7 9 14 15 16 18 
+Solução encontrada!
+2 3 4 8 12 14 15 16 18 
+Solução encontrada!
+2 3 4 8 12 14 16 18 
+Solução encontrada!
+2 3 4 8 14 15 16 18 
+Solução encontrada!
+2 3 4 8 14 16 18 
+Solução encontrada!
+2 3 4 9 12 14 15 16 18 
+Solução encontrada!
+2 3 4 9 14 15 16 18 
+Solução encontrada!
+2 3 6 7 8 15 16 18 
+Solução encontrada!
+2 3 6 7 8 16 18 
+Solução encontrada!
+2 3 6 7 9 15 16 18 
+Solução encontrada!
+2 3 6 8 11 15 16 18 
+Solução encontrada!
+2 3 6 8 11 16 18 
+Solução encontrada!
+2 3 6 9 11 15 16 18 
+Solução encontrada!
+2 3 7 8 12 15 16 18 
+Solução encontrada!
+2 3 7 8 12 16 18 
+Solução encontrada!
+2 3 7 8 14 15 16 18 
+Solução encontrada!
+2 3 7 8 14 16 18 
+Solução encontrada!
+2 3 7 9 12 15 16 18 
+Solução encontrada!
+2 3 7 9 14 15 16 18 
+Solução encontrada!
+2 3 8 11 12 14 15 16 18 
+Solução encontrada!
+2 3 8 11 12 14 16 18 
+Solução encontrada!
+2 3 8 11 14 15 16 18 
+Solução encontrada!
+2 3 8 11 14 16 18 
+Solução encontrada!
+2 3 9 11 12 14 15 16 18 
+Solução encontrada!
+2 3 9 11 14 15 16 18 
+Solução encontrada!
+2 4 6 8 9 15 16 18 19 
+Solução encontrada!
+2 4 6 8 9 16 18 19 
+Solução encontrada!
+2 4 6 9 15 16 18 19 
+Solução encontrada!
+2 4 7 8 9 12 15 16 18 19 
+Solução encontrada!
+2 4 7 8 9 12 16 18 19 
+Solução encontrada!
+2 4 7 9 12 15 16 18 19 
+Solução encontrada!
+2 4 8 9 12 14 15 16 18 19 
+Solução encontrada!
+2 4 8 9 12 14 16 18 19 
+Solução encontrada!
+2 4 9 12 14 15 16 18 19 
+Solução encontrada!
+2 6 7 8 9 15 16 18 19 
+Solução encontrada!
+2 6 7 8 9 16 18 19 
+Solução encontrada!
+2 6 7 9 15 16 18 19 
+Solução encontrada!
+2 6 8 9 11 15 16 18 19 
+Solução encontrada!
+2 6 8 9 11 16 18 19 
+Solução encontrada!
+2 6 9 11 15 16 18 19 
+Solução encontrada!
+2 7 8 9 12 15 16 18 19 
+Solução encontrada!
+2 7 8 9 12 16 18 19 
+Solução encontrada!
+2 7 9 12 15 16 18 19 
+Solução encontrada!
+2 8 9 11 12 14 15 16 18 19 
+Solução encontrada!
+2 8 9 11 12 14 16 18 19 
+Solução encontrada!
+2 9 11 12 14 15 16 18 19 
+Solução encontrada!
+3 4 5 6 8 10 15 
+Solução encontrada!
+3 4 5 6 8 10 15 16 
+Solução encontrada!
+3 4 5 6 8 10 15 16 18 
+Solução encontrada!
+3 4 5 6 8 10 15 18 
+Solução encontrada!
+3 4 5 6 8 10 16 
+Solução encontrada!
+3 4 5 6 8 10 16 18 
+Solução encontrada!
+3 4 5 6 8 15 16 17 
+Solução encontrada!
+3 4 5 6 8 15 16 17 18 
+Solução encontrada!
+3 4 5 6 8 15 17 
+Solução encontrada!
+3 4 5 6 8 15 17 18 
+Solução encontrada!
+3 4 5 6 8 16 17 
+Solução encontrada!
+3 4 5 6 8 16 17 18 
+Solução encontrada!
+3 4 5 6 9 10 15 
+Solução encontrada!
+3 4 5 6 9 10 15 16 
+Solução encontrada!
+3 4 5 6 9 10 15 16 18 
+Solução encontrada!
+3 4 5 6 9 10 15 18 
+Solução encontrada!
+3 4 5 6 9 15 16 17 
+Solução encontrada!
+3 4 5 6 9 15 16 17 18 
+Solução encontrada!
+3 4 5 6 9 15 17 
+Solução encontrada!
+3 4 5 6 9 15 17 18 
+Solução encontrada!
+3 4 5 7 8 10 12 15 
+Solução encontrada!
+3 4 5 7 8 10 12 15 16 
+Solução encontrada!
+3 4 5 7 8 10 12 15 16 18 
+Solução encontrada!
+3 4 5 7 8 10 12 15 18 
+Solução encontrada!
+3 4 5 7 8 10 12 16 
+Solução encontrada!
+3 4 5 7 8 10 12 16 18 
+Solução encontrada!
+3 4 5 7 8 10 14 15 
+Solução encontrada!
+3 4 5 7 8 10 14 15 16 
+Solução encontrada!
+3 4 5 7 8 10 14 15 16 18 
+Solução encontrada!
+3 4 5 7 8 10 14 15 18 
+Solução encontrada!
+3 4 5 7 8 10 14 16 
+Solução encontrada!
+3 4 5 7 8 10 14 16 18 
+Solução encontrada!
+3 4 5 7 8 12 15 16 17 
+Solução encontrada!
+3 4 5 7 8 12 15 16 17 18 
+Solução encontrada!
+3 4 5 7 8 12 15 17 
+Solução encontrada!
+3 4 5 7 8 12 15 17 18 
+Solução encontrada!
+3 4 5 7 8 12 16 17 
+Solução encontrada!
+3 4 5 7 8 12 16 17 18 
+Solução encontrada!
+3 4 5 7 8 14 15 16 17 
+Solução encontrada!
+3 4 5 7 8 14 15 16 17 18 
+Solução encontrada!
+3 4 5 7 8 14 15 17 
+Solução encontrada!
+3 4 5 7 8 14 15 17 18 
+Solução encontrada!
+3 4 5 7 8 14 16 17 
+Solução encontrada!
+3 4 5 7 8 14 16 17 18 
+Solução encontrada!
+3 4 5 7 9 10 12 15 
+Solução encontrada!
+3 4 5 7 9 10 12 15 16 
+Solução encontrada!
+3 4 5 7 9 10 12 15 16 18 
+Solução encontrada!
+3 4 5 7 9 10 12 15 18 
+Solução encontrada!
+3 4 5 7 9 10 14 15 
+Solução encontrada!
+3 4 5 7 9 10 14 15 16 
+Solução encontrada!
+3 4 5 7 9 10 14 15 16 18 
+Solução encontrada!
+3 4 5 7 9 10 14 15 18 
+Solução encontrada!
+3 4 5 7 9 12 15 16 17 
+Solução encontrada!
+3 4 5 7 9 12 15 16 17 18 
+Solução encontrada!
+3 4 5 7 9 12 15 17 
+Solução encontrada!
+3 4 5 7 9 12 15 17 18 
+Solução encontrada!
+3 4 5 7 9 14 15 16 17 
+Solução encontrada!
+3 4 5 7 9 14 15 16 17 18 
+Solução encontrada!
+3 4 5 7 9 14 15 17 
+Solução encontrada!
+3 4 5 7 9 14 15 17 18 
+Solução encontrada!
+3 4 5 8 10 12 14 15 
+Solução encontrada!
+3 4 5 8 10 12 14 15 16 
+Solução encontrada!
+3 4 5 8 10 12 14 15 16 18 
+Solução encontrada!
+3 4 5 8 10 12 14 15 18 
+Solução encontrada!
+3 4 5 8 10 12 14 16 
+Solução encontrada!
+3 4 5 8 10 12 14 16 18 
+Solução encontrada!
+3 4 5 8 10 14 15 
+Solução encontrada!
+3 4 5 8 10 14 15 16 
+Solução encontrada!
+3 4 5 8 10 14 15 16 18 
+Solução encontrada!
+3 4 5 8 10 14 15 18 
+Solução encontrada!
+3 4 5 8 10 14 16 
+Solução encontrada!
+3 4 5 8 10 14 16 18 
+Solução encontrada!
+3 4 5 8 12 14 15 16 17 
+Solução encontrada!
+3 4 5 8 12 14 15 16 17 18 
+Solução encontrada!
+3 4 5 8 12 14 15 17 
+Solução encontrada!
+3 4 5 8 12 14 15 17 18 
+Solução encontrada!
+3 4 5 8 12 14 16 17 
+Solução encontrada!
+3 4 5 8 12 14 16 17 18 
+Solução encontrada!
+3 4 5 8 14 15 16 17 
+Solução encontrada!
+3 4 5 8 14 15 16 17 18 
+Solução encontrada!
+3 4 5 8 14 15 17 
+Solução encontrada!
+3 4 5 8 14 15 17 18 
+Solução encontrada!
+3 4 5 8 14 16 17 
+Solução encontrada!
+3 4 5 8 14 16 17 18 
+Solução encontrada!
+3 4 5 9 10 12 14 15 
+Solução encontrada!
+3 4 5 9 10 12 14 15 16 
+Solução encontrada!
+3 4 5 9 10 12 14 15 16 18 
+Solução encontrada!
+3 4 5 9 10 12 14 15 18 
+Solução encontrada!
+3 4 5 9 10 14 15 
+Solução encontrada!
+3 4 5 9 10 14 15 16 
+Solução encontrada!
+3 4 5 9 10 14 15 16 18 
+Solução encontrada!
+3 4 5 9 10 14 15 18 
+Solução encontrada!
+3 4 5 9 12 14 15 16 17 
+Solução encontrada!
+3 4 5 9 12 14 15 16 17 18 
+Solução encontrada!
+3 4 5 9 12 14 15 17 
+Solução encontrada!
+3 4 5 9 12 14 15 17 18 
+Solução encontrada!
+3 4 5 9 14 15 16 17 
+Solução encontrada!
+3 4 5 9 14 15 16 17 18 
+Solução encontrada!
+3 4 5 9 14 15 17 
+Solução encontrada!
+3 4 5 9 14 15 17 18 
+Solução encontrada!
+3 4 6 8 10 15 16 18 
+Solução encontrada!
+3 4 6 8 10 16 18 
+Solução encontrada!
+3 4 6 9 10 15 16 18 
+Solução encontrada!
+3 4 7 8 10 12 15 16 18 
+Solução encontrada!
+3 4 7 8 10 12 16 18 
+Solução encontrada!
+3 4 7 8 10 14 15 16 18 
+Solução encontrada!
+3 4 7 8 10 14 16 18 
+Solução encontrada!
+3 4 7 9 10 12 15 16 18 
+Solução encontrada!
+3 4 7 9 10 14 15 16 18 
+Solução encontrada!
+3 4 8 10 12 14 15 16 18 
+Solução encontrada!
+3 4 8 10 12 14 16 18 
+Solução encontrada!
+3 4 8 10 14 15 16 18 
+Solução encontrada!
+3 4 8 10 14 16 18 
+Solução encontrada!
+3 4 9 10 12 14 15 16 18 
+Solução encontrada!
+3 4 9 10 14 15 16 18 
+Solução encontrada!
+3 5 6 7 8 10 13 15 16 17 
+Solução encontrada!
+3 5 6 7 8 10 13 15 16 17 18 
+Solução encontrada!
+3 5 6 7 8 10 13 15 17 
+Solução encontrada!
+3 5 6 7 8 10 13 15 17 18 
+Solução encontrada!
+3 5 6 7 8 10 13 16 17 
+Solução encontrada!
+3 5 6 7 8 10 13 16 17 18 
+Solução encontrada!
+3 5 6 7 8 13 15 16 17 
+Solução encontrada!
+3 5 6 7 8 13 15 16 17 18 
+Solução encontrada!
+3 5 6 7 8 13 15 17 
+Solução encontrada!
+3 5 6 7 8 13 15 17 18 
+Solução encontrada!
+3 5 6 7 8 13 16 17 
+Solução encontrada!
+3 5 6 7 8 13 16 17 18 
+Solução encontrada!
+3 5 6 7 9 10 13 15 16 17 
+Solução encontrada!
+3 5 6 7 9 10 13 15 16 17 18 
+Solução encontrada!
+3 5 6 7 9 10 13 15 17 
+Solução encontrada!
+3 5 6 7 9 10 13 15 17 18 
+Solução encontrada!
+3 5 6 7 9 13 15 16 17 
+Solução encontrada!
+3 5 6 7 9 13 15 16 17 18 
+Solução encontrada!
+3 5 6 7 9 13 15 17 
+Solução encontrada!
+3 5 6 7 9 13 15 17 18 
+Solução encontrada!
+3 5 6 8 10 11 13 15 16 17 
+Solução encontrada!
+3 5 6 8 10 11 13 15 16 17 18 
+Solução encontrada!
+3 5 6 8 10 11 13 15 17 
+Solução encontrada!
+3 5 6 8 10 11 13 15 17 18 
+Solução encontrada!
+3 5 6 8 10 11 13 16 17 
+Solução encontrada!
+3 5 6 8 10 11 13 16 17 18 
+Solução encontrada!
+3 5 6 8 11 13 15 16 17 
+Solução encontrada!
+3 5 6 8 11 13 15 16 17 18 
+Solução encontrada!
+3 5 6 8 11 13 15 17 
+Solução encontrada!
+3 5 6 8 11 13 15 17 18 
+Solução encontrada!
+3 5 6 8 11 13 16 17 
+Solução encontrada!
+3 5 6 8 11 13 16 17 18 
+Solução encontrada!
+3 5 6 9 10 11 13 15 16 17 
+Solução encontrada!
+3 5 6 9 10 11 13 15 16 17 18 
+Solução encontrada!
+3 5 6 9 10 11 13 15 17 
+Solução encontrada!
+3 5 6 9 10 11 13 15 17 18 
+Solução encontrada!
+3 5 6 9 11 13 15 16 17 
+Solução encontrada!
+3 5 6 9 11 13 15 16 17 18 
+Solução encontrada!
+3 5 6 9 11 13 15 17 
+Solução encontrada!
+3 5 6 9 11 13 15 17 18 
+Solução encontrada!
+3 5 7 8 10 12 13 15 16 17 
+Solução encontrada!
+3 5 7 8 10 12 13 15 16 17 18 
+Solução encontrada!
+3 5 7 8 10 12 13 15 17 
+Solução encontrada!
+3 5 7 8 10 12 13 15 17 18 
+Solução encontrada!
+3 5 7 8 10 12 13 16 17 
+Solução encontrada!
+3 5 7 8 10 12 13 16 17 18 
+Solução encontrada!
+3 5 7 8 10 13 14 15 16 17 
+Solução encontrada!
+3 5 7 8 10 13 14 15 16 17 18 
+Solução encontrada!
+3 5 7 8 10 13 14 15 17 
+Solução encontrada!
+3 5 7 8 10 13 14 15 17 18 
+Solução encontrada!
+3 5 7 8 10 13 14 16 17 
+Solução encontrada!
+3 5 7 8 10 13 14 16 17 18 
+Solução encontrada!
+3 5 7 8 12 13 15 16 17 
+Solução encontrada!
+3 5 7 8 12 13 15 16 17 18 
+Solução encontrada!
+3 5 7 8 12 13 15 17 
+Solução encontrada!
+3 5 7 8 12 13 15 17 18 
+Solução encontrada!
+3 5 7 8 12 13 16 17 
+Solução encontrada!
+3 5 7 8 12 13 16 17 18 
+Solução encontrada!
+3 5 7 8 13 14 15 16 17 
+Solução encontrada!
+3 5 7 8 13 14 15 16 17 18 
+Solução encontrada!
+3 5 7 8 13 14 15 17 
+Solução encontrada!
+3 5 7 8 13 14 15 17 18 
+Solução encontrada!
+3 5 7 8 13 14 16 17 
+Solução encontrada!
+3 5 7 8 13 14 16 17 18 
+Solução encontrada!
+3 5 7 9 10 12 13 15 16 17 
+Solução encontrada!
+3 5 7 9 10 12 13 15 16 17 18 
+Solução encontrada!
+3 5 7 9 10 12 13 15 17 
+Solução encontrada!
+3 5 7 9 10 12 13 15 17 18 
+Solução encontrada!
+3 5 7 9 10 13 14 15 16 17 
+Solução encontrada!
+3 5 7 9 10 13 14 15 16 17 18 
+Solução encontrada!
+3 5 7 9 10 13 14 15 17 
+Solução encontrada!
+3 5 7 9 10 13 14 15 17 18 
+Solução encontrada!
+3 5 7 9 12 13 15 16 17 
+Solução encontrada!
+3 5 7 9 12 13 15 16 17 18 
+Solução encontrada!
+3 5 7 9 12 13 15 17 
+Solução encontrada!
+3 5 7 9 12 13 15 17 18 
+Solução encontrada!
+3 5 7 9 13 14 15 16 17 
+Solução encontrada!
+3 5 7 9 13 14 15 16 17 18 
+Solução encontrada!
+3 5 7 9 13 14 15 17 
+Solução encontrada!
+3 5 7 9 13 14 15 17 18 
+Solução encontrada!
+3 5 8 10 11 12 13 14 15 16 17 
+Solução encontrada!
+3 5 8 10 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 5 8 10 11 12 13 14 15 17 
+Solução encontrada!
+3 5 8 10 11 12 13 14 15 17 18 
+Solução encontrada!
+3 5 8 10 11 12 13 14 16 17 
+Solução encontrada!
+3 5 8 10 11 12 13 14 16 17 18 
+Solução encontrada!
+3 5 8 10 11 13 14 15 16 17 
+Solução encontrada!
+3 5 8 10 11 13 14 15 16 17 18 
+Solução encontrada!
+3 5 8 10 11 13 14 15 17 
+Solução encontrada!
+3 5 8 10 11 13 14 15 17 18 
+Solução encontrada!
+3 5 8 10 11 13 14 16 17 
+Solução encontrada!
+3 5 8 10 11 13 14 16 17 18 
+Solução encontrada!
+3 5 8 11 12 13 14 15 16 17 
+Solução encontrada!
+3 5 8 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 5 8 11 12 13 14 15 17 
+Solução encontrada!
+3 5 8 11 12 13 14 15 17 18 
+Solução encontrada!
+3 5 8 11 12 13 14 16 17 
+Solução encontrada!
+3 5 8 11 12 13 14 16 17 18 
+Solução encontrada!
+3 5 8 11 13 14 15 16 17 
+Solução encontrada!
+3 5 8 11 13 14 15 16 17 18 
+Solução encontrada!
+3 5 8 11 13 14 15 17 
+Solução encontrada!
+3 5 8 11 13 14 15 17 18 
+Solução encontrada!
+3 5 8 11 13 14 16 17 
+Solução encontrada!
+3 5 8 11 13 14 16 17 18 
+Solução encontrada!
+3 5 9 10 11 12 13 14 15 16 17 
+Solução encontrada!
+3 5 9 10 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 5 9 10 11 12 13 14 15 17 
+Solução encontrada!
+3 5 9 10 11 12 13 14 15 17 18 
+Solução encontrada!
+3 5 9 10 11 13 14 15 16 17 
+Solução encontrada!
+3 5 9 10 11 13 14 15 16 17 18 
+Solução encontrada!
+3 5 9 10 11 13 14 15 17 
+Solução encontrada!
+3 5 9 10 11 13 14 15 17 18 
+Solução encontrada!
+3 5 9 11 12 13 14 15 16 17 
+Solução encontrada!
+3 5 9 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 5 9 11 12 13 14 15 17 
+Solução encontrada!
+3 5 9 11 12 13 14 15 17 18 
+Solução encontrada!
+3 5 9 11 13 14 15 16 17 
+Solução encontrada!
+3 5 9 11 13 14 15 16 17 18 
+Solução encontrada!
+3 5 9 11 13 14 15 17 
+Solução encontrada!
+3 5 9 11 13 14 15 17 18 
+Solução encontrada!
+3 6 7 8 10 13 15 16 17 18 
+Solução encontrada!
+3 6 7 8 10 13 16 17 18 
+Solução encontrada!
+3 6 7 9 10 13 15 16 17 18 
+Solução encontrada!
+3 6 8 10 11 13 15 16 17 18 
+Solução encontrada!
+3 6 8 10 11 13 16 17 18 
+Solução encontrada!
+3 6 9 10 11 13 15 16 17 18 
+Solução encontrada!
+3 7 8 10 12 13 15 16 17 18 
+Solução encontrada!
+3 7 8 10 12 13 16 17 18 
+Solução encontrada!
+3 7 8 10 13 14 15 16 17 18 
+Solução encontrada!
+3 7 8 10 13 14 16 17 18 
+Solução encontrada!
+3 7 9 10 12 13 15 16 17 18 
+Solução encontrada!
+3 7 9 10 13 14 15 16 17 18 
+Solução encontrada!
+3 8 10 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 8 10 11 12 13 14 16 17 18 
+Solução encontrada!
+3 8 10 11 13 14 15 16 17 18 
+Solução encontrada!
+3 8 10 11 13 14 16 17 18 
+Solução encontrada!
+3 9 10 11 12 13 14 15 16 17 18 
+Solução encontrada!
+3 9 10 11 13 14 15 16 17 18 
+Solução encontrada!
+4 5 6 8 9 10 15 16 18 19 
+Solução encontrada!
+4 5 6 8 9 10 15 16 19 
+Solução encontrada!
+4 5 6 8 9 10 15 18 19 
+Solução encontrada!
+4 5 6 8 9 10 15 19 
+Solução encontrada!
+4 5 6 8 9 10 16 18 19 
+Solução encontrada!
+4 5 6 8 9 10 16 19 
+Solução encontrada!
+4 5 6 8 9 15 16 17 18 19 
+Solução encontrada!
+4 5 6 8 9 15 16 17 19 
+Solução encontrada!
+4 5 6 8 9 15 17 18 19 
+Solução encontrada!
+4 5 6 8 9 15 17 19 
+Solução encontrada!
+4 5 6 8 9 16 17 18 19 
+Solução encontrada!
+4 5 6 8 9 16 17 19 
+Solução encontrada!
+4 5 6 9 10 15 16 18 19 
+Solução encontrada!
+4 5 6 9 10 15 16 19 
+Solução encontrada!
+4 5 6 9 10 15 18 19 
+Solução encontrada!
+4 5 6 9 10 15 19 
+Solução encontrada!
+4 5 6 9 15 16 17 18 19 
+Solução encontrada!
+4 5 6 9 15 16 17 19 
+Solução encontrada!
+4 5 6 9 15 17 18 19 
+Solução encontrada!
+4 5 6 9 15 17 19 
+Solução encontrada!
+4 5 7 8 9 10 12 15 16 18 19 
+Solução encontrada!
+4 5 7 8 9 10 12 15 16 19 
+Solução encontrada!
+4 5 7 8 9 10 12 15 18 19 
+Solução encontrada!
+4 5 7 8 9 10 12 15 19 
+Solução encontrada!
+4 5 7 8 9 10 12 16 18 19 
+Solução encontrada!
+4 5 7 8 9 10 12 16 19 
+Solução encontrada!
+4 5 7 8 9 12 15 16 17 18 19 
+Solução encontrada!
+4 5 7 8 9 12 15 16 17 19 
+Solução encontrada!
+4 5 7 8 9 12 15 17 18 19 
+Solução encontrada!
+4 5 7 8 9 12 15 17 19 
+Solução encontrada!
+4 5 7 8 9 12 16 17 18 19 
+Solução encontrada!
+4 5 7 8 9 12 16 17 19 
+Solução encontrada!
+4 5 7 9 10 12 15 16 18 19 
+Solução encontrada!
+4 5 7 9 10 12 15 16 19 
+Solução encontrada!
+4 5 7 9 10 12 15 18 19 
+Solução encontrada!
+4 5 7 9 10 12 15 19 
+Solução encontrada!
+4 5 7 9 12 15 16 17 18 19 
+Solução encontrada!
+4 5 7 9 12 15 16 17 19 
+Solução encontrada!
+4 5 7 9 12 15 17 18 19 
+Solução encontrada!
+4 5 7 9 12 15 17 19 
+Solução encontrada!
+4 5 8 9 10 12 14 15 16 18 19 
+Solução encontrada!
+4 5 8 9 10 12 14 15 16 19 
+Solução encontrada!
+4 5 8 9 10 12 14 15 18 19 
+Solução encontrada!
+4 5 8 9 10 12 14 15 19 
+Solução encontrada!
+4 5 8 9 10 12 14 16 18 19 
+Solução encontrada!
+4 5 8 9 10 12 14 16 19 
+Solução encontrada!
+4 5 8 9 12 14 15 16 17 18 19 
+Solução encontrada!
+4 5 8 9 12 14 15 16 17 19 
+Solução encontrada!
+4 5 8 9 12 14 15 17 18 19 
+Solução encontrada!
+4 5 8 9 12 14 15 17 19 
+Solução encontrada!
+4 5 8 9 12 14 16 17 18 19 
+Solução encontrada!
+4 5 8 9 12 14 16 17 19 
+Solução encontrada!
+4 5 9 10 12 14 15 16 18 19 
+Solução encontrada!
+4 5 9 10 12 14 15 16 19 
+Solução encontrada!
+4 5 9 10 12 14 15 18 19 
+Solução encontrada!
+4 5 9 10 12 14 15 19 
+Solução encontrada!
+4 5 9 12 14 15 16 17 18 19 
+Solução encontrada!
+4 5 9 12 14 15 16 17 19 
+Solução encontrada!
+4 5 9 12 14 15 17 18 19 
+Solução encontrada!
+4 5 9 12 14 15 17 19 
+Solução encontrada!
+4 6 8 9 10 15 16 18 19 
+Solução encontrada!
+4 6 8 9 10 16 18 19 
+Solução encontrada!
+4 6 9 10 15 16 18 19 
+Solução encontrada!
+4 7 8 9 10 12 15 16 18 19 
+Solução encontrada!
+4 7 8 9 10 12 16 18 19 
+Solução encontrada!
+4 7 9 10 12 15 16 18 19 
+Solução encontrada!
+4 8 9 10 12 14 15 16 18 19 
+Solução encontrada!
+4 8 9 10 12 14 16 18 19 
+Solução encontrada!
+4 9 10 12 14 15 16 18 19 
+Solução encontrada!
+5 6 7 8 9 10 13 15 16 17 18 19 
+Solução encontrada!
+5 6 7 8 9 10 13 15 16 17 19 
+Solução encontrada!
+5 6 7 8 9 10 13 15 17 18 19 
+Solução encontrada!
+5 6 7 8 9 10 13 15 17 19 
+Solução encontrada!
+5 6 7 8 9 10 13 16 17 18 19 
+Solução encontrada!
+5 6 7 8 9 10 13 16 17 19 
+Solução encontrada!
+5 6 7 8 9 13 15 16 17 18 19 
+Solução encontrada!
+5 6 7 8 9 13 15 16 17 19 
+Solução encontrada!
+5 6 7 8 9 13 15 17 18 19 
+Solução encontrada!
+5 6 7 8 9 13 15 17 19 
+Solução encontrada!
+5 6 7 8 9 13 16 17 18 19 
+Solução encontrada!
+5 6 7 8 9 13 16 17 19 
+Solução encontrada!
+5 6 7 9 10 13 15 16 17 18 19 
+Solução encontrada!
+5 6 7 9 10 13 15 16 17 19 
+Solução encontrada!
+5 6 7 9 10 13 15 17 18 19 
+Solução encontrada!
+5 6 7 9 10 13 15 17 19 
+Solução encontrada!
+5 6 7 9 13 15 16 17 18 19 
+Solução encontrada!
+5 6 7 9 13 15 16 17 19 
+Solução encontrada!
+5 6 7 9 13 15 17 18 19 
+Solução encontrada!
+5 6 7 9 13 15 17 19 
+Solução encontrada!
+5 6 8 9 10 11 13 15 16 17 18 19 
+Solução encontrada!
+5 6 8 9 10 11 13 15 16 17 19 
+Solução encontrada!
+5 6 8 9 10 11 13 15 17 18 19 
+Solução encontrada!
+5 6 8 9 10 11 13 15 17 19 
+Solução encontrada!
+5 6 8 9 10 11 13 16 17 18 19 
+Solução encontrada!
+5 6 8 9 10 11 13 16 17 19 
+Solução encontrada!
+5 6 8 9 11 13 15 16 17 18 19 
+Solução encontrada!
+5 6 8 9 11 13 15 16 17 19 
+Solução encontrada!
+5 6 8 9 11 13 15 17 18 19 
+Solução encontrada!
+5 6 8 9 11 13 15 17 19 
+Solução encontrada!
+5 6 8 9 11 13 16 17 18 19 
+Solução encontrada!
+5 6 8 9 11 13 16 17 19 
+Solução encontrada!
+5 6 9 10 11 13 15 16 17 18 19 
+Solução encontrada!
+5 6 9 10 11 13 15 16 17 19 
+Solução encontrada!
+5 6 9 10 11 13 15 17 18 19 
+Solução encontrada!
+5 6 9 10 11 13 15 17 19 
+Solução encontrada!
+5 6 9 11 13 15 16 17 18 19 
+Solução encontrada!
+5 6 9 11 13 15 16 17 19 
+Solução encontrada!
+5 6 9 11 13 15 17 18 19 
+Solução encontrada!
+5 6 9 11 13 15 17 19 
+Solução encontrada!
+5 7 8 9 10 12 13 15 16 17 18 19 
+Solução encontrada!
+5 7 8 9 10 12 13 15 16 17 19 
+Solução encontrada!
+5 7 8 9 10 12 13 15 17 18 19 
+Solução encontrada!
+5 7 8 9 10 12 13 15 17 19 
+Solução encontrada!
+5 7 8 9 10 12 13 16 17 18 19 
+Solução encontrada!
+5 7 8 9 10 12 13 16 17 19 
+Solução encontrada!
+5 7 8 9 12 13 15 16 17 18 19 
+Solução encontrada!
+5 7 8 9 12 13 15 16 17 19 
+Solução encontrada!
+5 7 8 9 12 13 15 17 18 19 
+Solução encontrada!
+5 7 8 9 12 13 15 17 19 
+Solução encontrada!
+5 7 8 9 12 13 16 17 18 19 
+Solução encontrada!
+5 7 8 9 12 13 16 17 19 
+Solução encontrada!
+5 7 9 10 12 13 15 16 17 18 19 
+Solução encontrada!
+5 7 9 10 12 13 15 16 17 19 
+Solução encontrada!
+5 7 9 10 12 13 15 17 18 19 
+Solução encontrada!
+5 7 9 10 12 13 15 17 19 
+Solução encontrada!
+5 7 9 12 13 15 16 17 18 19 
+Solução encontrada!
+5 7 9 12 13 15 16 17 19 
+Solução encontrada!
+5 7 9 12 13 15 17 18 19 
+Solução encontrada!
+5 7 9 12 13 15 17 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 15 16 17 18 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 15 16 17 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 15 17 18 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 15 17 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 16 17 18 19 
+Solução encontrada!
+5 8 9 10 11 12 13 14 16 17 19 
+Solução encontrada!
+5 8 9 11 12 13 14 15 16 17 18 19 
+Solução encontrada!
+5 8 9 11 12 13 14 15 16 17 19 
+Solução encontrada!
+5 8 9 11 12 13 14 15 17 18 19 
+Solução encontrada!
+5 8 9 11 12 13 14 15 17 19 
+Solução encontrada!
+5 8 9 11 12 13 14 16 17 18 19 
+Solução encontrada!
+5 8 9 11 12 13 14 16 17 19 
+Solução encontrada!
+5 9 10 11 12 13 14 15 16 17 18 19 
+Solução encontrada!
+5 9 10 11 12 13 14 15 16 17 19 
+Solução encontrada!
+5 9 10 11 12 13 14 15 17 18 19 
+Solução encontrada!
+5 9 10 11 12 13 14 15 17 19 
+Solução encontrada!
+5 9 11 12 13 14 15 16 17 18 19 
+Solução encontrada!
+5 9 11 12 13 14 15 16 17 19 
+Solução encontrada!
+5 9 11 12 13 14 15 17 18 19 
+Solução encontrada!
+5 9 11 12 13 14 15 17 19 
+Solução encontrada!
+6 7 8 9 10 13 15 16 17 18 19 
+Solução encontrada!
+6 7 8 9 10 13 16 17 18 19 
+Solução encontrada!
+6 7 9 10 13 15 16 17 18 19 
+Solução encontrada!
+6 8 9 10 11 13 15 16 17 18 19 
+Solução encontrada!
+6 8 9 10 11 13 16 17 18 19 
+Solução encontrada!
+6 9 10 11 13 15 16 17 18 19 
+Solução encontrada!
+7 8 9 10 12 13 15 16 17 18 19 
+Solução encontrada!
+7 8 9 10 12 13 16 17 18 19 
+Solução encontrada!
+7 9 10 12 13 15 16 17 18 19 
+Solução encontrada!
+8 9 10 11 12 13 14 15 16 17 18 19 
+Solução encontrada!
+8 9 10 11 12 13 14 16 17 18 19 
+Solução encontrada!
+9 10 11 12 13 14 15 16 17 18 19 
 
-=====================================
-Conjunto de Grupos União: 1 2 3 4 6 5 
-
-Conjunto de Grupos Restantes: 1 2 3 4 5 6 
-
-Resultado: 1
-Solucao: 0 
-
-=====================================
-Conjunto de Grupos União: 2 4 6 3 5 1 
-
-Conjunto de Grupos Restantes: 4 5 6 
-
-Resultado: 1
-Solucao: 0 1 
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 5 
-
-Resultado: 1
-Solucao: 0 1 3 
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 2 4 6 3 5 1 
-
-Conjunto de Grupos Restantes: 4 5 6 
-
-Resultado: 1
-Solucao: 0 2 
-
-=====================================
-Conjunto de Grupos União: 4 5 1 
-
-Conjunto de Grupos Restantes: 4 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 4 5 1 
-
-Conjunto de Grupos Restantes: 4 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 2 4 6 3 5 1 
-
-Conjunto de Grupos Restantes: 4 5 6 
-
-Resultado: 1
-Solucao: 0 3 
-
-=====================================
-Conjunto de Grupos União: 1 5 
-
-Conjunto de Grupos Restantes: 6 
-
-Resultado: 0
-
-=====================================
-Conjunto de Grupos União: 2 4 6 3 5 1 
-
-Conjunto de Grupos Restantes: 4 5 6 
-
-Resultado: 1
-Solucao: 0 4 
-
-=====================================
-Conjunto de Grupos União: 1 2 3 4 6 5 
-
-Conjunto de Grupos Restantes: 1 2 3 4 5 6 
-
-Resultado: 1
-Solucao: 1 
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 1 3 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 1 3 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 3 6 4 5 1 
-
-Conjunto de Grupos Restantes: 1 3 5 
-
-Resultado: 1
-
-=====================================
-Conjunto de Grupos União: 1 2 3 4 6 5 
-
-Conjunto de Grupos Restantes: 1 2 3 4 5 6 
-
-Resultado: 1
-Solucao: 2 
-
-=====================================
-Conjunto de Grupos União: 4 5 1 
-
-Conjunto de Grupos Restantes: 1 2 4 5 
-
-Resultado: 0
-
-=====================================
-Conjunto de Grupos União: 1 2 3 4 6 5 
-
-Conjunto de Grupos Restantes: 1 2 3 4 5 6 
-
-Resultado: 1
-Solucao: 3 
-
-=====================================
-Conjunto de Grupos União: 1 5 
-
-Conjunto de Grupos Restantes: 1 2 3 6 
-
-Resultado: 0
-
-=====================================
-Conjunto de Grupos União: 1 2 3 4 6 5 
-
-Conjunto de Grupos Restantes: 1 2 3 4 5 6 
-
-Resultado: 1
-Solucao: 4 
-
-Solução ótima: 1 4 2 
+Solução ótima: 4 12 7 14 
 
 =====================================

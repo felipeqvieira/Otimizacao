@@ -4,8 +4,8 @@ int node_count = 0;
 
 int todosGruposCobertos(conjunto_t *solution){
 
-  printf("Solucao: ");
-  imprime(solution);
+  //printf("Solucao: ");
+  //imprime(solution);
 
   //printf("\n=====================================\n");
 
@@ -30,6 +30,8 @@ int todosGruposCobertos(conjunto_t *solution){
   //printf("\n");
 
   if(cobertos->card == qtdGroups){
+    printf("Solução encontrada!\n");
+    imprime(solution);
     //printf("\nTodos os grupos cobertos\n");
     //printf("\n=====================================\n");
     return 1;
@@ -65,7 +67,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
   for (int i = currentLevel; i < remaining->remainingCandidates->card; i++) {
 
     if(options->pruneFeasibility){
-      if(clCalcule(currentLevel, remaining, result) == false)
+      if(clCalcule(i, remaining, result) == false)
         return;
     }
 
@@ -76,7 +78,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
       }
     }
 
-    node_count++;
+    
     
     int candidate = remaining->remainingCandidates->v[i];
     int cardinal = remaining->remainingGroups->card;
@@ -105,6 +107,8 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     if (cardinal == remaining->remainingGroups->card){
       continue;
     }
+
+    node_count++;
 
     insere_conjunto(result->solution, candidate);
     //printf("Candidato inserido no conjunto da solução: ");

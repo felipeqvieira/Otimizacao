@@ -98,10 +98,7 @@ int main(int argc, char *argv[]){
     return 1;
   }
 
-  if(options.pruneOptimality){
-    sortCandidatesByGroup(candidates);
-  }
-  
+  sortCandidatesByGroup(candidates);
   
   for(int i = 0; i < qtdCandidates; i++){
     insere_conjunto_ordenado(remaining->remainingCandidates, i);
