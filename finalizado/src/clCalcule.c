@@ -1,27 +1,41 @@
 #include "../lib/define.h"
 
-conjunto_t * clCalcule(Remaining *remaining, Result *result){
+bool clCalcule(int currentLevel, Remaining *remaining, Result *result){
 
-  conjunto_t* cl_definitive = cria_conjunto(qtdCandidates);
+  if(remaining->remainingGroups->card == 0){
+    return false;
+  }
 
-  //printf("\n=====================================\n");
+  printf("\n=====================================\n");
 
-  //printf("\nFunção clCalcule: Calculando CL\n\n");
+  conjunto_t *cl_definitive = cria_conjunto(qtdGroups);
 
   // passa por todos os candidatos restantes
-  for(int i = 0; i < remaining->remainingCandidates->card; i++){
-
-    // pega o candidato
-    int candidate = remaining->remainingCandidates->v[i];
-
-    // se o candidato cobrir algum dos grupos restantes, ele é inserido no conjunto de CL
-    if(conta_iguais(candidates[candidate].groups, remaining->remainingGroups)){
-      //printf("Candidato %d inserido no conjunto de Cl!\n", candidate);
-      insere_conjunto_ordenado(cl_definitive, candidate);
-    }
-
+  for(int i = currentLevel; i < remaining->remainingCandidates->card; i++){
+    cl_definitive = cria_uniao(cl_definitive, candidates[remaining->remainingCandidates->v[i]].groups);
   }
-  //printf("\n=====================================\n");
 
-  return cl_definitive;
+  printf("Conjunto de Grupos União: ");
+  imprime(cl_definitive);
+
+  printf("\n");
+
+  printf("Conjunto de Grupos Restantes: ");
+  imprime(remaining->remainingGroups);
+
+  printf("\n");
+
+  int resultado = contido(remaining->remainingGroups, cl_definitive);
+
+  printf("Resultado: %d\n", resultado);
+
+  if(resultado){
+    destroi_conjunto(cl_definitive);
+    return true;
+  } else{
+    destroi_conjunto(cl_definitive);
+    return false;
+  }
+  printf("\n=====================================\n");
+
 }

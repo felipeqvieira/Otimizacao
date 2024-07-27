@@ -4,6 +4,9 @@ int node_count = 0;
 
 int todosGruposCobertos(conjunto_t *solution){
 
+  printf("Solucao: ");
+  imprime(solution);
+
   //printf("\n=====================================\n");
 
   //printf("\nFunção: Todos Grupos Cobertos!\n\n");
@@ -59,39 +62,15 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
   }
 
-  if(options->pruneFeasibility)
-    improvements->cl = clCalcule(remaining, result);
-  else
-    improvements->cl = remaining->remainingCandidates;
+  for (int i = currentLevel; i < remaining->remainingCandidates->card; i++) {
 
-
-  for(int i = 0; i < improvements->cl->card; i++){
-    for(int j = i+1; j < improvements->cl->card; j++){
-      if(candidates[improvements->cl->v[i]].numGroups < candidates[improvements->cl->v[j]].numGroups){
-        int aux = improvements->cl->v[i];
-        improvements->cl->v[i] = improvements->cl->v[j];
-        improvements->cl->v[j] = aux;
-      }
+    if(options->pruneFeasibility){
+      if(clCalcule(currentLevel, remaining, result) == false)
+        return;
     }
-  }
-  
 
-  cl_storage[currentLevel] = cria_copia(improvements->cl);
-
-  //printf("Cl: ");
-  //imprime(improvements->cl);
-
-  //printf("\n");
-
-  for (int i = 0; i < improvements->cl->card; i++) {
-
-    /*if (boundCalcule(improvements->cl, result, remaining) == 0) {
-        //printf("Saiu pelo Bound!\n");
-        continue;
-    }
-    */
     if(options->pruneOptimality){
-      if(boundCalcule2(improvements->cl, result, remaining) >= result->definitiveSolution->card){
+      if(boundCalcule2(currentLevel, result, remaining) >= result->definitiveSolution->card){
         //printf("Saiu pelo Bound!\n");
         continue;
       }
@@ -99,7 +78,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
     node_count++;
     
-    int candidate = improvements->cl->v[i];
+    int candidate = remaining->remainingCandidates->v[i];
     int cardinal = remaining->remainingGroups->card;
 
     //printf("\nInicializando for com i = %d\n\n", i);
@@ -127,16 +106,10 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
       continue;
     }
 
-    //printf("Candidatos restantes: ");
-    //imprime(remaining->remainingCandidates);
-    //printf("\n");
-
     insere_conjunto(result->solution, candidate);
     //printf("Candidato inserido no conjunto da solução: ");
     //imprime(result->solution);
     //printf("\n");
-
-    retira_conjunto(remaining->remainingCandidates, candidate);
 
     //printf("Candidatos restantes: ");
     //imprime(remaining->remainingCandidates);
@@ -147,15 +120,15 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
 
     //printf("\n");
 
-    //printf("Chamando Backtracking %d\n", currentLevel+1);
+    //printf("Chamando Backtracking %d\n", i+1);
 
     //printf("\n=====================================\n");
 
-    backTracking(currentLevel+1, result, remaining, improvements, options, cl_storage);
+    backTracking(i+1, result, remaining, improvements, options, cl_storage);
 
     //printf("\n=====================================\n");
 
-    //printf("Voltou para o Backtracking %d\n", currentLevel);
+    //printf("Voltou para o Backtracking %d\n", i);
 
     retira_conjunto_sem_ordenacao(result->solution, candidate);
 
@@ -165,7 +138,7 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     //printf("\n");
 
     destroi_conjunto(remaining->remainingGroups);
-        remaining->remainingGroups = cria_conjunto(qtdGroups);
+    remaining->remainingGroups = cria_conjunto(qtdGroups);
 
     for(int i = 0; i < qtdGroups; i++){
       insere_conjunto(remaining->remainingGroups, i+1);
@@ -178,21 +151,8 @@ void backTracking(int currentLevel, Result *result, Remaining *remaining, Improv
     //printf("Grupos restantes: ");
     //imprime(remaining->remainingGroups);
 
-    //printf("\n");
-
-    insere_conjunto_ordenado(remaining->remainingCandidates, candidate);
-
-    //printf("Candidato %d inserido no conjunto de candidatos restantes: ", candidate);
-    //imprime(remaining->remainingCandidates); 
-
     //printf("\n"); 
 
-    improvements->cl = cria_copia(cl_storage[currentLevel]);
-
-    //printf("Cl substituído para: ");
-    //imprime(improvements->cl);
-
-    //printf("\n");
   }
 
     //printf("Solucao: ");

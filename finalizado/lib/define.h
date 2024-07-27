@@ -41,9 +41,9 @@ int todosGruposCobertos(conjunto_t *solution);
 
 void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options, conjunto_t **cl_storage);
 
-conjunto_t* clCalcule(Remaining *remaining, Result *result);
+bool clCalcule(int currentLevel, Remaining *remaining, Result *result);
 
-int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining);
+int boundCalcule(int currentLevel, Result *result, Remaining *remaining);
 
 void *alocar_memoria(size_t qtd, size_t size_of_struct);
 
@@ -57,6 +57,6 @@ void imprime_solucao(conjunto_t *c, Candidate *candidates);
 
 int isCovered(int *groupCovered, int valor);
 
-int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining);
+int boundCalcule2(int currentLevel, Result *result, Remaining *remaining);
 
 void print_report(double cpu_time_used);

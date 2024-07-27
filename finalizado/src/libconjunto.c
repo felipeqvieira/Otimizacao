@@ -211,9 +211,12 @@ conjunto_t * cria_diferenca (conjunto_t *c1, conjunto_t *c2){
 
 int contido(conjunto_t *c1, conjunto_t *c2){
 
-  for (int i = 0; i < c1->card; i++)
-    if (pertence(c2, c1->v[i]) == -1)
+  for (int i = 0; i < c1->card; i++){
+
+    if (pertence_sem_ordenacao(c2, c1->v[i]) == -1)
       return 0;
+
+  }
 
   return 1;
 

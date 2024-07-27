@@ -1,6 +1,6 @@
 #include "../lib/define.h"
 
-int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining){
+int boundCalcule(int currentLevel, Result *result, Remaining *remaining){
 
   //printf("\n=====================================\n");
   
@@ -9,21 +9,19 @@ int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining){
   // pega a quantidade de grupos restantes
   int lastGroups = remaining->remainingGroups->card;
 
-  //printf("Cl->card: %d\n\n", cl->card);
-
   //printf("Quantidade de grupos restantes: %d\n", lastGroups);
 
   float mediaGruposPorCandidato = 0;
 
   //quantidade total de grupos de todos os candidatos
-  for(int i = 0; i < cl->card; i++){
-    mediaGruposPorCandidato += candidates[cl->v[i]].numGroups;
+  for(int i = currentLevel; i < remaining->remainingCandidates->card; i++){
+    mediaGruposPorCandidato += candidates[remaining->remainingCandidates->v[i]].numGroups;
   }
 
   //printf("Quantidade Total de Grupo de todos os candidatos: %f\n", mediaGruposPorCandidato);
 
   //calcula a média de grupo por candidato cl
-  mediaGruposPorCandidato  = (mediaGruposPorCandidato/cl->card);
+  mediaGruposPorCandidato  = (mediaGruposPorCandidato/(remaining->remainingCandidates->card - currentLevel));
 
   mediaGruposPorCandidato = ceil(mediaGruposPorCandidato);
 
@@ -53,7 +51,7 @@ int boundCalcule(conjunto_t *cl, Result *result, Remaining *remaining){
 
 }
 
-int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining)
+int boundCalcule2(int currentLevel, Result *result, Remaining *remaining)
 {
 
   //printf("\n=====================================\n");
@@ -74,10 +72,10 @@ int boundCalcule2(conjunto_t *cl, Result *result, Remaining *remaining)
   /* Número máximo de grupos que um candidato restante cobre */
   float max_groups_per_candidate = 0;
 
-  for (int i = 0; i < cl->card; i++)
+  for (int i = currentLevel; i < remaining->remainingCandidates->card; i++)
   {
-    if(candidates[cl->v[i]].numGroups > max_groups_per_candidate)
-      max_groups_per_candidate = candidates[cl->v[i]].numGroups;
+    if(candidates[remaining->remainingCandidates->v[i]].numGroups > max_groups_per_candidate)
+      max_groups_per_candidate = candidates[remaining->remainingCandidates->v[i]].numGroups;
   }
 
   //printf("Número máximo de grupos que um candidato restante cobre: %f\n", max_groups_per_candidate);
