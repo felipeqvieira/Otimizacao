@@ -1,0 +1,119 @@
+Executando: ./comissao  < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Otimalidade e Viabilidade
+      n    | 24
+      t    | 0.012331 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -a < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Professor
+   Pruning | Otimalidade e Viabilidade
+      n    | 24
+      t    | 0.012097 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -o < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Viabilidade
+      n    | 1771
+      t    | 0.057014 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -f < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Otimalidade
+      n    | 40
+      t    | 0.000316 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -a -o < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Professor
+   Pruning | Viabilidade
+      n    | 1771
+      t    | 0.054846 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -a -f < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Professor
+   Pruning | Otimalidade
+      n    | 40
+      t    | 0.000415 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -o -f < exemplos/txt17.txt
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | No pruning
+      n    | 29991
+      t    | 0.503592 segundos
+
+====== Fim Relatório ==============================================
+
+
+
