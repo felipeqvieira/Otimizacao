@@ -113,7 +113,7 @@ int main(int argc, char *argv[]){
 
   imprime_solucao(result->definitiveSolution, candidates);
 
-  print_report(cpu_time_used);
+  print_report(cpu_time_used, options);
 
   printf("\n=====================================\n");
 

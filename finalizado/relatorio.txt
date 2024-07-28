@@ -1,0 +1,30 @@
+Executando: ./comissao  < exemplos/txt17
+Número de nós visitados: 24
+Tempo de execução (excluindo I/O): 0.003337 segundos
+
+
+Executando: ./comissao -a < exemplos/txt17
+Número de nós visitados: 159
+Tempo de execução (excluindo I/O): 0.010801 segundos
+
+
+Executando: ./comissao -o < exemplos/txt17
+Número de nós visitados: 1771
+Tempo de execução (excluindo I/O): 0.058181 segundos
+
+
+Executando: ./comissao -f < exemplos/txt17
+Número de nós visitados: 40
+Tempo de execução (excluindo I/O): 0.000328 segundos
+
+
+Executando: ./comissao -a -f < exemplos/txt17
+Número de nós visitados: 1036
+Tempo de execução (excluindo I/O): 0.010284 segundos
+
+
+Executando: ./comissao -o -f < exemplos/txt17
+Número de nós visitados: 29991
+Tempo de execução (excluindo I/O): 0.553780 segundos
+
+
