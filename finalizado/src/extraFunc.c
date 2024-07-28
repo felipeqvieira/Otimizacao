@@ -7,9 +7,7 @@ int compare_candidates_by_groups(const void *a, const void *b) {
 }
 
 void sort_candidates_by_groups(Candidate *candidates, int num_candidates){
-
     qsort(candidates, num_candidates, sizeof(Candidate), compare_candidates_by_groups);
-
 }
 
 
@@ -53,7 +51,33 @@ void imprime_solucao(conjunto_t *c, Candidate *candidates){
   printf("\n");
 }
 
-void print_report(double cpu_time_used) {
-  fprintf(stderr, "Número de nós visitados: %d\n", node_count);
-  fprintf(stderr, "Tempo de execução (excluindo I/O): %.6f segundos\n", cpu_time_used);
+void print_report(double cpu_time_used, Options options)
+{
+  fprintf(stderr, "\n\n====== Relatório ==================================================\n\n");
+  fprintf(stderr, "n = número de nós visitados\n");
+  fprintf(stderr, "t = tempo de execução (excluindo I/O)\n");
+
+  fprintf(stderr, "___________________________________________________________________\n");
+  if(options.boundProf)
+    fprintf(stderr, "   Bound   | Professor\n");
+  else
+    fprintf(stderr, "   Bound   | Alunos\n");
+
+  // if(options.pruneFeasibility || options.pruneFeasibility)
+    fprintf(stderr, "   Pruning | ");
+  
+  if (options.pruneOptimality && options.pruneFeasibility)
+    fprintf(stderr, "Otimalidade e Viabilidade\n");
+  else if (options.pruneOptimality)
+    fprintf(stderr, "Otimalidade\n");
+  else if (options.pruneFeasibility)
+    fprintf(stderr, "Viabilidade\n");
+  else
+    fprintf(stderr, "No pruning\n");
+  
+
+  fprintf(stderr, "      n    | %d\n", node_count);
+  fprintf(stderr, "      t    | %.6f segundos\n", cpu_time_used);
+  fprintf(stderr, "\n====== Fim Relatório ==============================================\n\n");
+
 }

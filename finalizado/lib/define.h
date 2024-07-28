@@ -59,4 +59,4 @@ int isCovered(int *groupCovered, int valor);
 
 int boundCalcule2(int currentLevel, Result *result, Remaining *remaining);
 
-void print_report(double cpu_time_used);
+void print_report(double cpu_time_used, Options options);
