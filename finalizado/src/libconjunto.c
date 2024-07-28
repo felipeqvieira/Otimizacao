@@ -236,37 +236,6 @@ conjunto_t *cria_copia(conjunto_t *c1){
 
 }
 
-int incrementar_iterador (conjunto_t *c, int *elemento){
-
-  if (c->ptr < c->card){
-
-    *elemento = c->v[c->ptr];
-
-    c->ptr++;
-
-    return 1;
-
-  }
-
-  return 0;
-}
-
-void iniciar_iterador (conjunto_t * c){
-
-  c->ptr = 0;
-
-}
-
-int retirar_um_elemento(conjunto_t *c){
-
-  int elemento = c->v[c->card];
-
-  c->card--;
-
-  return elemento;
-
-}
-
 conjunto_t * destroi_conjunto(conjunto_t *c){
 
   free(c->v);
@@ -275,53 +244,6 @@ conjunto_t * destroi_conjunto(conjunto_t *c){
 
   return NULL;
 
-}
-
-int redimensiona (conjunto_t *c){
-
-  c->v = realloc(c->v, sizeof(int)*c->max*2);
-
-  if (! c->v)
-    return 0;
-
-  c->max = c->max*2;
-
-  return 1;
-
-}
-
-/*
- * Cria um subconjunto com elementos aleatorios do conjunto c.
- * Se o conjunto for vazio, retorna um subconjunto vazio.
- * Se o n >= cardinalidade (c) entao retorna o proprio conjunto c.
- * Supoe que a funcao srand () tenha sido chamada antes.
- */
-
-conjunto_t * cria_subconjunto(conjunto_t *c, int n){
-
-  conjunto_t *sub = cria_conjunto(n);
-
-  if (! sub)
-    return NULL;
-
-  if (conjunto_vazio(c) == 1)
-    return sub;
-
-  if (n >= c->card)
-    return cria_copia(c);
-
-  while (n > 0){
-
-    int pos = rand() % c->card;
-
-    if (insere_conjunto(sub, c->v[pos]) == 1)
-      n--;
-
-  }
-
-  return sub;
-
-  
 }
 
 void imprime(conjunto_t *c){

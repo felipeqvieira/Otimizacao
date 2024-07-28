@@ -20,12 +20,8 @@ typedef struct{
 
 typedef struct{
   conjunto_t *remainingGroups;
-  conjunto_t *remainingCandidates;
+  conjunto_t *candidates;
 }Remaining;
-
-typedef struct{
-  conjunto_t *cl;
-}Improvements;
 
 typedef struct{
   bool pruneOptimality;
@@ -35,15 +31,12 @@ typedef struct{
 
 extern int qtdGroups, qtdCandidates, node_count;
 extern Candidate *candidates;
-extern conjunto_t **cl_storage;
 
 int todosGruposCobertos(conjunto_t *solution);
 
-void backTracking(int currentLevel, Result *result, Remaining *remaining, Improvements *improvements, Options *options, conjunto_t **cl_storage);
+void backTracking(int currentLevel, Result *result, Remaining *remaining, Options *options);
 
 bool clCalcule(int currentLevel, Remaining *remaining, Result *result);
-
-int boundCalcule(int currentLevel, Result *result, Remaining *remaining);
 
 void *alocar_memoria(size_t qtd, size_t size_of_struct);
 
@@ -60,3 +53,5 @@ int isCovered(int *groupCovered, int valor);
 int boundCalcule2(int currentLevel, Result *result, Remaining *remaining);
 
 void print_report(double cpu_time_used);
+
+int profBound(Remaining *remaining, Result *result);

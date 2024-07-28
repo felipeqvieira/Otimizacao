@@ -82,45 +82,11 @@ conjunto_t * cria_uniao (conjunto_t *c1, conjunto_t *c2);
 conjunto_t * cria_copia (conjunto_t *c);
 
 /*
- * Cria um subconjunto com elementos aleatorios do conjunto c.
- * Se o conjunto for vazio, retorna um subconjunto vazio.
- * Se o n >= cardinalidade (c) entao retorna o proprio conjunto c.
- * Supoe que a funcao srand () tenha sido chamada antes.
- */
-conjunto_t * cria_subconjunto (conjunto_t *c, int n);
-
-/*
  * Imprime os elementos do conjunto sempre em ordem crescente,
  * mesmo que a estrutura interna nao garanta isso.
  */
 void imprime (conjunto_t *c);
 
-/*
- * Retorna 1 se conseguiu dobrar o tamanho max do conjunto e 0 caso contrario.
- */
-int redimensiona (conjunto_t *c);
-
-/*
- * As funcoes abaixo permitem acessar elementos apontados pelo ponteiro 'ptr'.
- * Este ponteiro pode ser inicializado e incrementado, viabilizando
- * a implementacao de um mecanismo iterador.
- */
-
-/*
- * Inicializa o contador que sera usado na funcao incrementar_iterador 
- */
-void iniciar_iterador (conjunto_t *c);
-
-/*
- * Incrementa iterador e retorna o elemento apontado. Retorna 0 se acabou conjunto 
- */
-int incrementar_iterador (conjunto_t *c, int *elemento);
-
-/*
- * Escolhe um elemento qualquer do conjunto para ser removido e o remove.
- * Nao faz teste se conjunto eh vazio, deixa para main fazer isso       
- */
-int retirar_um_elemento (conjunto_t *c);
 
 int conta_iguais(conjunto_t *c1, conjunto_t *c2);
 

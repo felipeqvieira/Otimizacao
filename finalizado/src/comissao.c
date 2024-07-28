@@ -3,8 +3,6 @@
 Candidate *candidates;
 conjunto_t *groupCovered;
 
-conjunto_t **cl_storage;
-
 int qtdGroups, qtdCandidates;
 
 int main(int argc, char *argv[]){
@@ -67,10 +65,7 @@ int main(int argc, char *argv[]){
 
   Remaining *remaining = (Remaining *)alocar_memoria(1, sizeof(Remaining));
   remaining->remainingGroups = cria_conjunto(qtdGroups);
-  remaining->remainingCandidates = cria_conjunto(qtdCandidates);
-
-  Improvements *improvements = (Improvements *)alocar_memoria(1, sizeof(Improvements));
-  improvements->cl = cria_conjunto(qtdCandidates);
+  remaining->candidates = cria_conjunto(qtdCandidates);
 
   for(int i = 0; i < qtdGroups; i++){
     insere_conjunto(remaining->remainingGroups, i+1);
@@ -93,21 +88,21 @@ int main(int argc, char *argv[]){
     
   }
 
-  if(isInfeasible(candidates)){
-    printf("Solução inviável\n");
-    return 1;
+  if(options.pruneFeasibility){
+    if(isInfeasible(candidates)){
+      printf("Solução inviável\n");
+      return 1;
+    }
   }
 
   sortCandidatesByGroup(candidates);
   
   for(int i = 0; i < qtdCandidates; i++){
-    insere_conjunto_ordenado(remaining->remainingCandidates, i);
+    insere_conjunto_ordenado(remaining->candidates, i);
   }
 
-  cl_storage = (conjunto_t **)alocar_memoria(qtdCandidates, sizeof(conjunto_t *));
-
   start = clock();
-  backTracking(0, result, remaining, improvements, &options, cl_storage);
+  backTracking(0, result, remaining, &options);
   end = clock();
 
   cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
@@ -123,6 +118,5 @@ int main(int argc, char *argv[]){
   printf("\n=====================================\n");
 
   return 0;
-
 
 }
