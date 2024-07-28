@@ -113,6 +113,13 @@ int main(int argc, char *argv[]){
 
   imprime_solucao(result->definitiveSolution, candidates);
 
+  if(node_count == 0){
+    fprintf(stderr, "Solução Inviável\n");
+    fprintf(stderr, "t = tempo de execução (excluindo I/O)\n");
+    printf("\n=====================================\n");
+    return 0;
+  }
+
   print_report(cpu_time_used, options);
 
   printf("\n=====================================\n");

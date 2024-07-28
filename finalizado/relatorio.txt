@@ -1,30 +1,102 @@
-Executando: ./comissao  < exemplos/txt17
-Número de nós visitados: 24
-Tempo de execução (excluindo I/O): 0.003337 segundos
+Executando: ./comissao  < exemplos/txt18
 
 
-Executando: ./comissao -a < exemplos/txt17
-Número de nós visitados: 159
-Tempo de execução (excluindo I/O): 0.010801 segundos
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Otimalidade e Viabilidade
+      n    | 24
+      t    | 0.000531 segundos
+
+====== Fim Relatório ==============================================
 
 
-Executando: ./comissao -o < exemplos/txt17
-Número de nós visitados: 1771
-Tempo de execução (excluindo I/O): 0.058181 segundos
+
+Executando: ./comissao -a < exemplos/txt18
 
 
-Executando: ./comissao -f < exemplos/txt17
-Número de nós visitados: 40
-Tempo de execução (excluindo I/O): 0.000328 segundos
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Professor
+   Pruning | Otimalidade e Viabilidade
+      n    | 31
+      t    | 0.000641 segundos
+
+====== Fim Relatório ==============================================
 
 
-Executando: ./comissao -a -f < exemplos/txt17
-Número de nós visitados: 1036
-Tempo de execução (excluindo I/O): 0.010284 segundos
+
+Executando: ./comissao -o < exemplos/txt18
 
 
-Executando: ./comissao -o -f < exemplos/txt17
-Número de nós visitados: 29991
-Tempo de execução (excluindo I/O): 0.553780 segundos
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Viabilidade
+      n    | 51
+      t    | 0.001001 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -f < exemplos/txt18
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | Otimalidade
+      n    | 53
+      t    | 0.000577 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -a -f < exemplos/txt18
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Professor
+   Pruning | Otimalidade
+      n    | 328
+      t    | 0.003480 segundos
+
+====== Fim Relatório ==============================================
+
+
+
+Executando: ./comissao -o -f < exemplos/txt18
+
+
+====== Relatório ==================================================
+
+n = número de nós visitados
+t = tempo de execução (excluindo I/O)
+___________________________________________________________________
+   Bound   | Alunos
+   Pruning | No pruning
+      n    | 503
+      t    | 0.007194 segundos
+
+====== Fim Relatório ==============================================
+
 
 

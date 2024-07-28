@@ -47,6 +47,18 @@ void sortCandidatesByGroup(Candidate *candidate){
 
 void imprime_solucao(conjunto_t *c, Candidate *candidates){
 
+  //ordena por id
+
+  for(int i = 0; i < c->card; i++){
+    for(int j = i+1; j < c->card; j++){
+      if(candidates[c->v[i]].id > candidates[c->v[j]].id){
+        int aux = c->v[i];
+        c->v[i] = c->v[j];
+        c->v[j] = aux;
+      }
+    }
+  }
+
    for (int i = 0; i < c->card; i++)
     printf("%d ", candidates[c->v[i]].id);
 

@@ -1,56 +1,5 @@
 #include "../lib/define.h"
 
-int boundCalcule(int currentLevel, Result *result, Remaining *remaining){
-
-  //printf("\n=====================================\n");
-  
-  //printf("\nFunção boundCalcule\n\n");
-
-  // pega a quantidade de grupos restantes
-  int lastGroups = remaining->remainingGroups->card;
-
-  //printf("Quantidade de grupos restantes: %d\n", lastGroups);
-
-  float mediaGruposPorCandidato = 0;
-
-  //quantidade total de grupos de todos os candidatos
-  for(int i = currentLevel; i < remaining->candidates->card; i++){
-    mediaGruposPorCandidato += candidates[remaining->candidates->v[i]].numGroups;
-  }
-
-  //printf("Quantidade Total de Grupo de todos os candidatos: %f\n", mediaGruposPorCandidato);
-
-  //calcula a média de grupo por candidato cl
-  mediaGruposPorCandidato  = (mediaGruposPorCandidato/(remaining->candidates->card - currentLevel));
-
-  mediaGruposPorCandidato = ceil(mediaGruposPorCandidato);
-
-  //printf("Média de grupos por candidato: %f\n", mediaGruposPorCandidato);
-
-  //todos os grupos restantes para a solução dividido pela média de grupo por candidato
-  float minimoCandidatosNecessarios = (lastGroups / mediaGruposPorCandidato);
-
-  minimoCandidatosNecessarios = ceil(minimoCandidatosNecessarios);
-
-  //printf("Mínimo de candidatos necessários: %f\n", minimoCandidatosNecessarios);
-
-  //printf("Minimo de candidatos necessarios + tamanho da solução atual = %f\n", minimoCandidatosNecessarios + result->solution->card);
-
-  //printf("Tamanho da solução definitiva: %d\n", result->definitiveSolution->card);
-
-  if(minimoCandidatosNecessarios + result->solution->card >= result->definitiveSolution->card){
-    //printf("Função retornou 0\n");
-    //printf("\n=====================================\n");
-    return 0;
-  } else{
-    //printf("Função retornou 1\n");
-    //printf("\n=====================================\n");
-    return 1;
-  }
-
-
-}
-
 int boundCalcule2(int currentLevel, Result *result, Remaining *remaining)
 {
 
@@ -61,11 +10,9 @@ int boundCalcule2(int currentLevel, Result *result, Remaining *remaining)
     (Nº grupos não cobertos / número máximo de grupos que um candidato restante cobre)
   */
   
-  if (remaining->candidates->card == 0) return 0;
+  if (remaining->remainingGroups->card == 0) return 0;
 
   float num_remaining_groups = remaining->remainingGroups->card;
-
-  //printf("Número de grupos restantes: %f\n", num_remaining_groups);
 
   /* Número máximo de grupos que um candidato restante cobre */
   float max_groups_per_candidate = 0;
