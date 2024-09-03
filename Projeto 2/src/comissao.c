@@ -7,10 +7,6 @@ int qtdGroups, qtdCandidates;
 
 int main(int argc, char *argv[]){
 
-  printf("\n=====================================\n");
-
-  printf("\nFunção Main\n\n");
-
   clock_t start, end;
   double cpu_time_used;
 
@@ -36,7 +32,7 @@ int main(int argc, char *argv[]){
     }
   }
 
-  printOptions(options);
+  //printOptions(options);
 
   scanf("%d %d", &qtdGroups, &qtdCandidates);
 
@@ -90,7 +86,7 @@ int main(int argc, char *argv[]){
 
   if(options.pruneFeasibility){
     if(isInfeasible(candidates)){
-      printf("Solução inviável\n");
+      printf("Inviavel\n");
       return 1;
     }
   }
@@ -107,22 +103,8 @@ int main(int argc, char *argv[]){
 
   cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 
-  printf("\n");
-
-  printf("Solução ótima: ");
-
   imprime_solucao(result->definitiveSolution, candidates);
-
-  if(node_count == 0){
-    fprintf(stderr, "Solução Inviável\n");
-    fprintf(stderr, "t = tempo de execução (excluindo I/O)\n");
-    printf("\n=====================================\n");
-    return 0;
-  }
-
   print_report(cpu_time_used, options);
-
-  printf("\n=====================================\n");
 
   return 0;
 
